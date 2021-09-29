@@ -1,15 +1,22 @@
 <template>
 	<div class="home-main">
-		<div class="container-bg">
+		<div id="home"></div>
+		<div class="container-bg" :style="{ height: availHeight + 'px' }">
 			<div class="nav">
 				<div class="row col-md-12">
 					<div class="col-md-3 text-center fs-2 logo">questmindshare</div>
 					<div class="col-md-9 d-flex">
 						<div class="col-md-2"></div>
 						<div class="d-flex header-nav-bg col-md-10">
-							<div class="col-md-3 text-center border-end">Services</div>
-							<div class="col-md-3 text-center border-end">Markets</div>
-							<div class="col-md-3 text-center border-end">About</div>
+							<div class="col-md-3 text-center border-end" id="services">
+								<a href="#home" class="text-light">Services</a>
+							</div>
+							<div class="col-md-3 text-center border-end">
+								<a href="#home/partFour" class="text-light">Markets</a>
+							</div>
+							<div class="col-md-3 text-center border-end">
+								<a href="#partTwo" class="text-light">About</a>
+							</div>
 							<div
 								class="col-md-3 text-center"
 								@click="clickHandler('contact')"
@@ -42,6 +49,7 @@
 					<button
 						class="btn btn-lg"
 						style="background-color: #fea000; color: #267876"
+						@click="registerHandler"
 					>
 						Get Started Now
 					</button>
@@ -49,6 +57,7 @@
 			</div>
 		</div>
 		<div class="part-two">
+			<div id="partTwo"></div>
 			<div class="row text-center title">
 				<div class="col-md-12 fs-1">与业界最优秀的人合作，取得卓越的成就</div>
 			</div>
@@ -134,23 +143,29 @@
 			</div>
 		</div>
 		<div class="part-three">
+			<div id="home/partFour"></div>
 			<p class="text-center title fs-2">认识我们的全球观众</p>
 			<div class="row">
 				<div class="col-md-5">
-					<img src="../../assets/images/about-us.jpeg" alt="">
+					<img src="../../assets/images/about-us.jpeg" alt="" />
 				</div>
 				<div class="col-md-6 ml-5 right">
-					<p class="text-start lh-lg pl-4 right">
+					<p style="margin-top: 100px"></p>
+					<p class="text-start lh-lg pl-5 right">
 						Quest
 						是每个主要市场的标准供应商。在全球35个国家/地区拥有无与伦比的小组成员，具有独特的优势，可以满足任何专家组需求。
 					</p>
-					<p class="text-start lh-lg right">无与伦比的可行性和定价与行业响应率</p>
+					<p class="text-start lh-lg right">
+						无与伦比的可行性和定价与行业响应率
+					</p>
 					<p class="text-start lh-lg right">超过20家子供应商</p>
-					<p class="text-start lh-lg right">全球超过400000名直接或间接小组成员</p>
+					<p class="text-start lh-lg right">
+						全球超过400000名直接或间接小组成员
+					</p>
 				</div>
 			</div>
 		</div>
-		<div class="part-four">
+		<div class="part-four" :style="{ height: availHeight + 'px' }">
 			<p class="fs-1 title text-center">All The Latest</p>
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -195,21 +210,37 @@
 			</div>
 		</div>
 		<!--轮播-->
-		<div class="part-five">
-			<p class="text-center">轮播图</p>
+		<div class="part-five pt-5" :style="{ height: availHeight + 'px' }">
+			<el-carousel
+				indicator-position="outside"
+				height="500px"
+				class="pt-5"
+				style="overflow: hidden"
+				type="card"
+			>
+				<el-carousel-item
+					v-for="(item, index) in swiperList"
+					:key="index"
+					class=""
+				>
+					<img :src="item.url" alt="" width="100%" height="500px" />
+					<div class="swiper-item-wrap"></div>
+					<div class="text text-center">{{ item.text }}</div>
+				</el-carousel-item>
+			</el-carousel>
 		</div>
 		<div class="part-six">
-			<div class="text-center">Subscribe to newsletter</div>
+			<div class="text-center fs-5">Subscribe to newsletter</div>
 			<p class="fs-1 text-center">Get Updated With Us</p>
 			<div class="justify-content-center d-flex pt-5">
-				<div class="col-md-4 d-flex">
+				<div class="col-md-5 d-flex">
 					<input
 						type="email"
 						class="form-control pt-3 pb-3"
 						id="exampleFormControlInput1"
 						placeholder="Your Email Address"
 					/>
-					<button class="btn btn-primary">Subscribe</button>
+					<button class="btn subscribe fs-5">Subscribe</button>
 				</div>
 			</div>
 			<div class="pt-5">
@@ -221,9 +252,15 @@
 					<div class="col-md-1"></div>
 					<div class="col-md-5">
 						<p class="text-center fs-3">Navigation</p>
-						<p class="text-start text-center pt-5">Services</p>
-						<p class="text-start text-center pt-3">Markets</p>
-						<p class="text-start text-center pt-3">About</p>
+						<p class="text-start text-center pt-5">
+							<a href="#home" class="text-light">Services</a>
+						</p>
+						<p class="text-start text-center pt-3">
+							<a href="#home/partFour" class="text-light">Markets</a>
+						</p>
+						<p class="text-start text-center pt-3">
+							<a href="#partTwo" class="text-light">About</a>
+						</p>
 						<p
 							class="text-start text-center pt-3"
 							@click="clickHandler('contact')"
@@ -262,11 +299,35 @@
 export default {
 	name: 'HomePage',
 	data() {
-		return {}
+		return {
+			availHeight: '',
+			swiperList: [
+				{
+					url: require('../../assets/images/swiper1.jpeg'),
+					text: 'Need a customized sample strategy for your annual tracker?',
+				},
+				{
+					url: require('../../assets/images/swiper2.jpeg'),
+					text: 'The partner that becomes an extension of your team.',
+				},
+				{
+					url: require('../../assets/images/swiper3.jpeg'),
+					text: 'Leverage a proprietary panel of consumers for any quantitative research study',
+				},
+			],
+		}
+	},
+	mounted() {
+		this.availHeight = window.screen.availHeight
+		// window.location.href = window.location.href.split('#')[0] + '#/home'
+		// debugger
 	},
 	methods: {
 		clickHandler(path) {
 			this.$router.push(`/${path}`)
+		},
+		registerHandler() {
+			this.$router.push(`/registerInfo`)
 		},
 	},
 }
@@ -275,7 +336,7 @@ export default {
 .home-main {
 	.container-bg {
 		background-image: url('../../assets/images/bgImage.png');
-		height: 100vh;
+		width: 100vw;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		.nav {
@@ -285,7 +346,14 @@ export default {
 			.header-nav-bg {
 				background-color: #156c6b;
 				color: #fff;
-				padding: 20px 0px;
+				height: 60px;
+				line-height: 60px;
+				#services :hover {
+					// color: red !important;
+				}
+			}
+			.header-nav-bg :hover {
+				background-color:#fea000;
 			}
 			.logo {
 				color: #003a38;
@@ -295,7 +363,7 @@ export default {
 	}
 	.part-two {
 		.title {
-			padding: 100px 0px;
+			padding: 120px 0px 120px 0px;
 			color: #003a38;
 		}
 		font-family: 'Times New Roman', Times, serif;
@@ -355,42 +423,88 @@ export default {
 		height: auto;
 		background-color: #fff;
 		.title {
-			padding: 100px  0px 70px 0px;
+			padding: 100px 0px 70px 0px;
 		}
-		.right{
-			padding-left: 50px;
+		.right {
+			padding-left: 100px;
 			padding-top: 20px;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 20px;
 		}
 	}
 	.part-four {
 		width: 100vw;
 		height: auto;
+		background-color: #fff;
 		.title {
-			padding: 100px 0px;
-			font-family:  "Montserrat", sans-serif;
+			padding: 200px 0px 100px 0px;
+			font-family: 'Montserrat', sans-serif;
 		}
 	}
 	.part-five {
 		width: 100vw;
-		height: 100vh;
+		height: auto;
+		background-color: #fff;
 		.title {
 			padding: 100px 0px;
+		}
+		.swiper-item-wrap {
+			width: 832px;
+			height: 500px;
+			position: absolute;
+			background-color: rgba(rgb(240, 15, 15), 0.7);
+			mix-blend-mode: multiply; //混合颜色
+			border-radius: 10px;
+			color: #fff;
+			top: 0;
+		}
+		.text {
+			color: #fff;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			padding: 200px 0px 0px 80px;
+			font-size: 30px;
+			width: 700px;
+			flex-wrap: wrap;
+		}
+		.el-carousel__item h3 {
+			color: #475669;
+			font-size: 18px;
+			opacity: 0.75;
+			line-height: 300px;
+			margin: 0;
+		}
+
+		.el-carousel__item:nth-child(2n) {
+			background-color: #99a9bf;
+		}
+
+		.el-carousel__item:nth-child(2n + 1) {
+			background-color: #d3dce6;
 		}
 	}
 	.part-six {
 		width: 100vw;
-		height: 100vh;
+		height: auto;
+		background-color: #fff;
 		.title {
 			padding: 100px 0px;
 		}
 		.bottom-nav {
-			background-color: #003e3c;
+			background-color: #333333;
 			color: #fff;
 		}
 		.copyright {
 			width: 100vw;
-			background-color: #003e3c;
+			background-color: #333333;
 			color: #fff;
+		}
+		.subscribe {
+			background-color: #fe7d00;
+			color: #fff;
+			width: 200px;
+			margin-left: 10px;
 		}
 	}
 }
