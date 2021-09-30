@@ -11,10 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/less/varibles.less'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'  
+import i18n from './lang/i18n.js'
 Vue.use(ElementUI)
 import less from 'less'
 Vue.use(less)
 new Vue({
   render: h => h(App),
-  router
+  router,
+  i18n
 }).$mount('#app')

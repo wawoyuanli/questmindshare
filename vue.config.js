@@ -36,9 +36,10 @@ module.exports = {
     sourceMap: false,
     // css预设器配置项
     loaderOptions: {
-      scss: {
+      sass: {
         javascriptEnabled: true, //less 配置
-        prependData: `@import "@/assets/less/variable.less;"`
+        prependData: `@import "@/assets/less/varibles.less"`,
+        data:`@import "@/assets/less/varibles.less"`
       }
     }
   },
@@ -78,7 +79,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        path.resolve(__dirname, './src/assets/less/varibles.less')
+        path.resolve(__dirname, './src/assets/less/varibles.less') //全局样式配置
       ],
     }
   }

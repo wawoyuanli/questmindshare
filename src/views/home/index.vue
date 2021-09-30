@@ -4,7 +4,7 @@
 		<div class="container-bg" :style="{ height: availHeight + 'px' }">
 			<div class="nav">
 				<div class="row col-md-12">
-					<div class="col-md-3 text-center fs-2 logo">questmindshare</div>
+					<div class="col-md-3 text-center fs-1 logo">questmindshare</div>
 					<div class="col-md-9 d-flex">
 						<div class="col-md-2"></div>
 						<div class="d-flex header-nav-bg col-md-10">
@@ -39,7 +39,7 @@
 			</div>
 			<div class="left-content row">
 				<div class="col-md-1"></div>
-				<div class="col-md-5 fs-4 text-start">
+				<div class="col-md-5 fs-4 text-start mt-3">
 					行业领先的数据收集服务和技术，可满足您的需求。
 				</div>
 			</div>
@@ -47,8 +47,7 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-5">
 					<button
-						class="btn btn-lg"
-						style="background-color: #fea000; color: #267876"
+						class="btn btn-lg col-md-4 fs-4 get-started"
 						@click="registerHandler"
 					>
 						Get Started Now
@@ -59,14 +58,14 @@
 		<div class="part-two">
 			<div id="partTwo"></div>
 			<div class="row text-center title">
-				<div class="col-md-12 fs-1">与业界最优秀的人合作，取得卓越的成就</div>
+				<div class="col-md-12">与业界最优秀的人合作，取得卓越的成就</div>
 			</div>
 			<div class="content" style="">
 				<div class="row opacity-bg">
 					<div class="col-md-4 left-text fs-4 mt-5 text-start">
 						<div class="pt-5 mt-5"></div>
 						<div class="pt-5 mt-5"></div>
-						<div>
+						<div class="lh-lg">
 							构建可信的数据模型， 利用我们的全球小组，
 							与您需要的确切受访者一起为您的研究提供支持，是消费者和企业的首选。
 						</div>
@@ -89,10 +88,10 @@
 									src="../../assets/images/panel.png"
 									alt=""
 									width="64px"
-									class="mt-2"
+									class="mt-2 p-2"
 								/>
-								<p class="pt-3 text-start fs-4 panel">控制版</p>
-								<div class="text-start pt-5 lh-lg">
+								<p class="pt-3 text-start fs-4 panel p-2">控制版</p>
+								<div class="text-start pt-4 lh-lg p-2">
 									从行业到非政府组织，从消费者音乐听众到企业 C 级执行官，
 									Quest的数百万人参与的小组提供了高质量的数据集。
 								</div>
@@ -102,10 +101,10 @@
 									src="../../assets/images/service.png"
 									alt=""
 									width="64px"
-									class="mt-2"
+									class="mt-2 p-2"
 								/>
-								<p class="pt-3 text-start service fs-4">服务</p>
-								<p class="text-start pt-5 lh-lg">
+								<p class="pt-3 text-start service fs-4 p-2">服务</p>
+								<p class="text-start pt-4 lh-lg p-2">
 									给你最好的服务。Quest
 									的服务水平，无论是项目管理、编程还是咨询，都专门满足您的需求。
 								</p>
@@ -118,10 +117,10 @@
 									src="../../assets/images/technology.png"
 									alt=""
 									width="64px"
-									class="mt-2"
+									class="mt-2 p-2"
 								/>¸
-								<p class="pt-3 text-start fs-4 technology">技术</p>
-								<p class="text-start pt-5 lh-lg">
+								<p class="pt-3 text-start fs-4 technology p-2">技术</p>
+								<p class="text-start pt-4 lh-lg p-2">
 									自由团队与建设并与高级团队合作，提供优质的编码和托管服务。
 								</p>
 							</div>
@@ -130,10 +129,10 @@
 									src="../../assets/images/tools.png"
 									alt=""
 									width="64px"
-									class="mt-2"
+									class="mt-2 p-2"
 								/>¸
-								<p class="pt-3 text-start fs-4">工具</p>
-								<p class="text-start pt-5 lh-lg">
+								<p class="pt-3 text-start fs-4 p-2">工具</p>
+								<p class="text-start pt-4 lh-lg p-2">
 									各种自研的工具，满足你的需求。
 								</p>
 							</div>
@@ -169,19 +168,19 @@
 			<p class="fs-1 title text-center">All The Latest</p>
 			<div class="row">
 				<div class="col-md-2"></div>
-				<div class="col-md-10 d-flex">
-					<div class="col-md-3 card rounded p-2 shadow">
+				<div class="col-md-10 d-flex partfour-desc">
+					<div class="col-md-3 card rounded p-2 pb-5 shadow">
 						<img
 							src="../../assets/images/cardimage1.jpeg"
 							class="card-img-top"
 							alt="..."
 						/>
-						<p class="text-start pt-5 pb-5">
+						<p class="text-start pt-5 pb-5 fs-5">
 							What does customer service mean to researcher clients?
 						</p>
 					</div>
 					<div
-						class="col-md-3 card text-start p-2 shadow rounded"
+						class="col-md-3 card text-start p-2 pb-5 shadow rounded"
 						style="margin-left: 10px"
 					>
 						<img
@@ -189,12 +188,12 @@
 							class="card-img-top"
 							alt="..."
 						/>
-						<p class="text-start pt-5 pb-5">
+						<p class="text-start pt-5 pb-5 fs-5">
 							Market Research Panels – from a Panelist POV
 						</p>
 					</div>
 					<div
-						class="col-md-3 card ml-1 text-start p-2 shadow rounded"
+						class="col-md-3 card ml-1 text-start p-2 pb-5 shadow rounded"
 						style="margin-left: 10px"
 					>
 						<img
@@ -202,7 +201,7 @@
 							class="card-img-top"
 							alt="..."
 						/>
-						<p class="text-start pt-5 pb-5">
+						<p class="text-start pt-5 pb-5 fs-5">
 							WIRE: Reflection, Resilience and Elevation – Webinar Recap
 						</p>
 					</div>
@@ -210,7 +209,7 @@
 			</div>
 		</div>
 		<!--轮播-->
-		<div class="part-five pt-5" :style="{ height: availHeight + 'px' }">
+		<div class="part-five pt-5">
 			<el-carousel
 				indicator-position="outside"
 				height="500px"
@@ -230,9 +229,9 @@
 			</el-carousel>
 		</div>
 		<div class="part-six">
-			<div class="text-center fs-5">Subscribe to newsletter</div>
-			<p class="fs-1 text-center">Get Updated With Us</p>
-			<div class="justify-content-center d-flex pt-5">
+			<div class="text-center fs-5 pt-5">Subscribe to newsletter</div>
+			<p class="fs-1 text-center pt-4">Get Updated With Us</p>
+			<div class="justify-content-center d-flex pt-5 mt-5">
 				<div class="col-md-5 d-flex">
 					<input
 						type="email"
@@ -348,25 +347,38 @@ export default {
 				color: #fff;
 				height: 60px;
 				line-height: 60px;
-				#services :hover {
-					// color: red !important;
-				}
+				font-size: 20px;
+				font-family: @fontFamily;
+			}
+			#services {
+				background-color: #fea000;
 			}
 			.header-nav-bg :hover {
-				background-color:#fea000;
+				background-color: #fea000;
 			}
 			.logo {
-				color: #003a38;
-				font-family: 'Times New Roman', Times, serif;
+				font-family: @fontFamily;
+				text-shadow: 2px 2px;
+				color: @logoColor;
+				font-style: oblique;
 			}
+		}
+		.left-content {
+			color: #267876;
+			font-family: @fontFamily;
+		}
+		.get-started {
+			background-color: #fea000;
+			color: #267876;
 		}
 	}
 	.part-two {
 		.title {
 			padding: 120px 0px 120px 0px;
-			color: #003a38;
+			color: @color;
+			font-family: @fontFamily;
+			font-size: 30px;
 		}
-		font-family: 'Times New Roman', Times, serif;
 		.content {
 			background-image: url('../../assets/images/part-three.png');
 			background-repeat: no-repeat;
@@ -375,7 +387,7 @@ export default {
 			.left-text {
 				padding: 10% 0px 0px 40px !important;
 				color: #003a38;
-				font-family: 'Courier New', Courier, monospace;
+				font-family: @fontFamily;
 			}
 			.opacity-bg {
 				width: 100vw;
@@ -383,6 +395,7 @@ export default {
 				text-align: center;
 				background-color: rgba(rgb(0, 132, 255), 0.4);
 				color: #003a38;
+				font-family: @fontFamily;
 				.card-wrap {
 					.card1 {
 						height: 23rem;
@@ -424,12 +437,16 @@ export default {
 		background-color: #fff;
 		.title {
 			padding: 100px 0px 70px 0px;
+			color: @partThreeTitleColor;
+			font-family: @fontFamily;
+			background-blend-mode: multiply;
 		}
 		.right {
 			padding-left: 100px;
 			padding-top: 20px;
-			font-family: 'Courier New', Courier, monospace;
+			font-family: @fontFamily;
 			font-size: 20px;
+			color: #fea000;
 		}
 	}
 	.part-four {
@@ -438,7 +455,12 @@ export default {
 		background-color: #fff;
 		.title {
 			padding: 200px 0px 100px 0px;
-			font-family: 'Montserrat', sans-serif;
+			font-family: @fontFamily;
+			color: @color;
+		}
+		.partfour-desc {
+			color: #184780;
+			font-family: @fontFamily;
 		}
 	}
 	.part-five {
@@ -476,18 +498,12 @@ export default {
 			margin: 0;
 		}
 
-		.el-carousel__item:nth-child(2n) {
-			background-color: #99a9bf;
-		}
-
-		.el-carousel__item:nth-child(2n + 1) {
-			background-color: #d3dce6;
-		}
 	}
 	.part-six {
 		width: 100vw;
 		height: auto;
 		background-color: #fff;
+		padding-top: 8rem;
 		.title {
 			padding: 100px 0px;
 		}
