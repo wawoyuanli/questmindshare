@@ -1,9 +1,8 @@
 <template>
 	<div class="register-box">
 		<div class="nav-bg-liner">
-			<Nav id="borderBottom" :color="color" :isActive="isActive"></Nav>
+			<Nav id="borderBottom" bgColor="#333333"></Nav>
 		</div>
-
 		<div class="register">
 			<Register @register="register" ref="register" />
 		</div>
@@ -174,7 +173,6 @@ export default {
 </script>
 <style scoped lang="less">
 .register-box {
-	margin-top: 8rem;
 	.nav-item {
 		color: #0f0f0f;
 		font-size: 1.1rem;

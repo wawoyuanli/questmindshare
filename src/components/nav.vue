@@ -1,24 +1,54 @@
 <template>
-	<div class="nav-main">
-		<div class="row">
-			<div class="col-md-3 text-light lh-lg">questmindshare</div>
-			<div class="col-md-9">1</div>
+	<div class="row pt-5 border-bottom pb-4" :style="{backgroundColor:bgColor}">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<ul class="nav justify-content-center">
+				<li class="nav-item col-md-2 text-center" @click="clickHandler('home')">
+					<a
+						class="nav-link active text-light fs-5"
+						aria-current="page"
+						href="#"
+						>Services</a
+					>
+				</li>
+				<li class="nav-item col-md-2 text-center">
+					<a class="nav-link fs-5 text-light" href="#"  @click="clickHandler('home')">Markets</a>
+				</li>
+				<li class="nav-item col-md-2 text-center">
+					<a class="nav-link fs-5 text-light" href="#"  @click="clickHandler('home')">About</a>
+				</li>
+				<li class="nav-item col-md-2 text-center">
+					<a class="nav-link fs-5 text-light"  @click="clickHandler('contact')">Contact</a>
+				</li>
+			</ul>
 		</div>
+		<div class="col-md-2"></div>
 	</div>
 </template>
 <script>
 export default {
 	name: 'NavPage',
+	props:{
+		bgColor:{
+			type:String,
+			default:""
+		}
+	},
 	data() {
 		return {}
 	},
-	methods: {},
+	methods: {
+		clickHandler(path) {
+			this.$router.push(`/${path}`)
+		},
+	},
 }
 </script>
 <style scoped lang='less'>
 .nav-main {
 	width: 100vw;
 	height: 6rem;
-	background-color:@partThreeTitleColor ;
+	background-color: #fad3b1;
+	color: #e04200 !important;
 }
 </style>

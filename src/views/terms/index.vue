@@ -1,6 +1,6 @@
 <template>
   <div class="terms">
-    <Nav id="borderBottom" :color="color" :isActive="isActive"></Nav>
+    <Nav id="borderBottom" bgColor='#333333'></Nav>
     <div class="terms-content">
       <div class="container-fluid">
         <div class="row">

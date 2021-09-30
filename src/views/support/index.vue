@@ -1,6 +1,6 @@
 <template>
   <div id="support">
-    <Nav :color="color" :isActive="isActive" id="borderBottom" />
+    <Nav bgColor='#333333'/>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">

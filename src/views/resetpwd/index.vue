@@ -1,6 +1,6 @@
 <template>
   <div class="resetpwd">
-    <Nav id="borderBottom" :color="color" :isActive="isActive"></Nav>
+    <Nav id="borderBottom" bgColor='#333333'></Nav>
     <div class="container pt">
       <div class="row">
         <div class="col-md-12">

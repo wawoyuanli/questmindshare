@@ -1,6 +1,6 @@
 <template>
   <div class="privacy">
-    <Nav id="borderBottom" :color="color" :isActive="isActive"></Nav>
+    <Nav id="borderBottom" bgColor='#333333'></Nav>
     <div class="privacy-content">
       <div class="container-fluid">
         <!--title-->
