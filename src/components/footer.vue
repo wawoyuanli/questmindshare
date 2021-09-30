@@ -5,15 +5,24 @@
 			<div class="row pt-5 bottom-nav pb-5">
 				<div class="col-md-1"></div>
 				<div class="col-md-5">
-					<p class="text-center fs-3 text-light">Navigation</p>
+					<p class="text-center fs-3 text-light navigation">Navigation</p>
 					<p class="text-start text-center pt-5">
-						<a href="#home" class="text-light">Services</a>
+						<a href="#home" class="text-light" @click="clickHandler('home')"
+							>Services</a
+						>
 					</p>
 					<p class="text-start text-center pt-3">
-						<a href="#home/partFour" class="text-light">Markets</a>
+						<a
+							href="#home/partFour"
+							class="text-light"
+							@click="clickHandler('home')"
+							>Markets</a
+						>
 					</p>
 					<p class="text-start text-center pt-3">
-						<a href="#partTwo" class="text-light">About</a>
+						<a href="#partTwo" class="text-light" @click="clickHandler('home')"
+							>About</a
+						>
 					</p>
 					<p
 						class="text-start text-center pt-3 text-light"
@@ -54,11 +63,19 @@ export default {
 	data() {
 		return {}
 	},
+	methods: {
+		clickHandler(path) {
+			this.$router.push(`/${path}`)
+		},
+	},
 }
 </script>
 <style scoped lang='less'>
 .footer {
 	width: 100vw;
 	background-color: #333333;
+	.bottom-nav {
+		font-family: @fontFamily;
+	}
 }
 </style>

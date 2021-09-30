@@ -252,16 +252,16 @@
 					<div class="col-md-5">
 						<p class="text-center fs-3">Navigation</p>
 						<p class="text-start text-center pt-5">
-							<a href="#home" class="text-light">Services</a>
+							<a href="#home" class="text-light fs-6">Services</a>
 						</p>
 						<p class="text-start text-center pt-3">
-							<a href="#home/partFour" class="text-light">Markets</a>
+							<a href="#home/partFour" class="text-light fs-6">Markets</a>
 						</p>
 						<p class="text-start text-center pt-3">
-							<a href="#partTwo" class="text-light">About</a>
+							<a href="#partTwo" class="text-light fs-6">About</a>
 						</p>
 						<p
-							class="text-start text-center pt-3"
+							class="text-start text-center pt-3 fs-6"
 							@click="clickHandler('contact')"
 						>
 							Contact
@@ -269,13 +269,13 @@
 					</div>
 					<div class="col-md-5">
 						<p class="fs-3 text-center">Support</p>
-						<p class="text-center pt-5" @click="clickHandler('terms')">
+						<p class="text-center pt-5 fs-6" @click="clickHandler('terms')">
 							Term of Use
 						</p>
-						<p class="text-center pt-3" @click="clickHandler('privacy')">
+						<p class="text-center pt-3 fs-6" @click="clickHandler('privacy')">
 							Privacy Policy
 						</p>
-						<p class="text-center pt-3">Don't Sell My Info</p>
+						<p class="text-center pt-3 fs-6">Don't Sell My Info</p>
 					</div>
 				</div>
 			</div>
@@ -504,10 +504,13 @@ export default {
 		height: auto;
 		background-color: #fff;
 		padding-top: 8rem;
+		font-family: @fontFamily;
 		.title {
 			padding: 100px 0px;
+			font-family: @fontFamily;
 		}
 		.bottom-nav {
+			font-family: @fontFamily;
 			background-color: #333333;
 			color: #fff;
 		}
