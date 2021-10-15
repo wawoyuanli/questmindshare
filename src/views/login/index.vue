@@ -1,15 +1,22 @@
 <template>
 	<div class="login">
-		<Nav :color="color" :isActive="isActive" id="borderBottom"></Nav>
+		<!-- <Nav></Nav> -->
 		<div class="login-form">
-			<Login @login="login" ref="login"></Login>
+			<div class="row">
+				<div class="col-md-8"></div>
+				<div class="col-md-4 my-5">
+					<div class="login-box my-5">
+						<Login @login="login" ref="login"></Login>
+					</div>
+				</div>
+			</div>
 		</div>
 		<Dialog ref="myConfirm" @userBehavior="userBehaviorFun"></Dialog>
-		<Footer />
+		<!-- <Footer /> -->
 	</div>
 </template>
 <script>
-import Nav from '@c/nav.vue'
+import Nav from '@c/navbar.vue'
 import Login from '@c/login.vue'
 import Footer from '@c/footer.vue' //引入底部组件
 import Dialog from '@c/dialog.vue'
@@ -28,16 +35,12 @@ export default {
 			isActive: true,
 		}
 	},
-	mounted() {
-		document.getElementById('borderBottom').classList.add('borderBottom')
-	},
+	mounted() {},
 	methods: {
 		login(data) {
 			let _th = this
 			if (!data.username) {
 				alert('Username can not be empty')
-				// _th.$refs.login.errMess = "用户名不能为空";
-				// _th.$refs.login.isShow = true;
 				return false
 			}
 			if (!data.username.trim().length) {
@@ -55,9 +58,9 @@ export default {
 				// _th.$refs.login.errMess = 'password can not be blank'
 				return false
 			}
-			if(!data.checkCode){
-              alert(`Verify You're Human`)
-			  return false
+			if (!data.checkCode) {
+				alert(`Verify You're Human`)
+				return false
 			}
 			let requestData = {
 				username: data.username,
@@ -86,4 +89,21 @@ export default {
 	},
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.login {
+	.login-form {
+		background-image: url('../../assets/images/3.png');
+		width: 100vw;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 100vh;
+		.login-box {
+			width: 80%;
+			height: auto;
+			background: #fff;
+			height: 70%;
+			border-radius: 10px;
+		}
+	}
+}
+</style>

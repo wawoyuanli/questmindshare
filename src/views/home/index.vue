@@ -3,7 +3,9 @@
 		<div id="home"></div>
 		<div class="container-bg" :style="{ height: availHeight + 'px' }">
 			<div class="nav">
-				<div class="row col-md-12 d-flex justify-content-center align-items-center">
+				<div
+					class="row col-md-12 d-flex justify-content-center align-items-center"
+				>
 					<div class="col-md-2 text-center fs-1 logo px-3">questmindshare</div>
 					<div class="col-md-9 d-flex">
 						<div class="col-md-2"></div>
@@ -23,22 +25,28 @@
 							>
 								Contact
 							</div>
-							<div class="col-md-2 text-center border-end">
+							<div class="col-md-2 text-center border-end" @click="clickHandler('login')">
 								<a href="#partTwo" class="text-light">Login</a>
 							</div>
-							<div class="col-md-2 text-center border-end">
+							<div class="col-md-2 text-center border-end" @click="clickHandler('registerInfo')">
 								<a href="#partTwo" class="text-light">sigin in</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-1">
-						<el-dropdown>
-							<el-button type="primary">
+					<div class="col-md-1 px-3">
+						<el-dropdown @command="handleClick">
+							<span class="el-dropdown-link" style="color: #409eff">
 								更换语言<i class="el-icon-arrow-down el-icon--right"></i>
-							</el-button>
+							</span>
+							<!-- <el-button type="primary">
+								更换语言<i class="el-icon-arrow-down el-icon--right"></i>
+							</el-button> -->
 							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item v-for="item in list" :key="item"
-									>{{item}}</el-dropdown-item
+								<el-dropdown-item
+									v-for="item in list"
+									:key="item.abbreviation"
+									:command="item.abbreviation"
+									>{{ item.lang }}</el-dropdown-item
 								>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -339,7 +347,11 @@ export default {
 					text: 'Leverage a proprietary panel of consumers for any quantitative research study',
 				},
 			],
-			list: ['language', '中文'],
+			list: [
+				{ lang: 'english', abbreviation: 'en' },
+				{ lang: '中文', abbreviation: 'zh' },
+				{ lang: 'German', abbreviation: 'de' },
+			],
 		}
 	},
 	mounted() {
@@ -351,6 +363,11 @@ export default {
 		},
 		registerHandler() {
 			this.$router.push(`/registerInfo`)
+		},
+		handleClick(lang) {
+			this.$store.commit('changeLanguage', {
+				lang: lang,
+			})
 		},
 	},
 }
@@ -376,6 +393,8 @@ export default {
 			}
 			#services {
 				background-color: #fea000;
+				// border-top-left-radius: 20px;
+				// border-bottom-left-radius: 20px;
 			}
 			.header-nav-bg :hover {
 				background-color: #fea000;

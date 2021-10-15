@@ -1,17 +1,24 @@
 <template>
 	<div class="register-box">
-		<div class="nav-bg-liner">
+		<!-- <div class="nav-bg-liner">
 			<Nav id="borderBottom" bgColor="#333333"></Nav>
-		</div>
+		</div> -->
 		<div class="register">
-			<Register @register="register" ref="register" />
+			<div class="row pt-4">
+				<div class="col-md-7"></div>
+				<div class="col-md-5">
+					<div class="register-input">
+						<Register @register="register" ref="register" />
+					</div>
+				</div>
+			</div>
 		</div>
 		<Dialog ref="dialog" @userBehavior="userBehaviorFun"></Dialog>
-		<Footer />
+		<!-- <Footer /> -->
 	</div>
 </template>
 <script>
-import Nav from '@c/nav.vue'
+import Nav from '@c/navbar.vue'
 import Register from '@c/register.vue'
 import Footer from '@c/footer.vue' //引入底部组件
 import Dialog from '@c/dialog.vue'
@@ -173,6 +180,19 @@ export default {
 </script>
 <style scoped lang="less">
 .register-box {
+	.register {
+		background-image: url('../../assets/images/3.png');
+		width: 100vw;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 100vh;
+		.register-input {
+			width: 80%;
+			height: auto;
+			background: #fff;
+			border-radius: 10px;
+		}
+	}
 	.nav-item {
 		color: #0f0f0f;
 		font-size: 1.1rem;

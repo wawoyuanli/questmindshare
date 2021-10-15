@@ -12,13 +12,41 @@
 					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
-					<a class="nav-link fs-5 text-light" href="#"  @click="clickHandler('home')">Markets</a>
+					<a
+						class="nav-link fs-5 text-light"
+						href="#"
+						@click="clickHandler('home')"
+						>Markets</a
+					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
-					<a class="nav-link fs-5 text-light" href="#"  @click="clickHandler('home')">About</a>
+					<a
+						class="nav-link fs-5 text-light"
+						href="#"
+						@click="clickHandler('home')"
+						>About</a
+					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
-					<a class="nav-link fs-5 text-light"  @click="clickHandler('contact')">Contact</a>
+					<a class="nav-link fs-5 text-light" @click="clickHandler('contact')"
+						>Contact</a
+					>
+				</li>
+				<li class="nav-item col-md-2 text-center">
+					<a
+						class="nav-link fs-5 text-light"
+						href="#"
+						@click="clickHandler('home')"
+						>Login</a 
+					>
+				</li>
+				<li class="nav-item col-md-2 text-center">
+					<a
+						class="nav-link fs-5 text-light"
+						href="#"
+						@click="clickHandler('home')"
+						>Sigin in</a
+					>
 				</li>
 			</ul>
 		</div>
@@ -28,11 +56,11 @@
 <script>
 export default {
 	name: 'NavPage',
-	props:{
-		bgColor:{
-			type:String,
-			default:""
-		}
+	props: {
+		bgColor: {
+			type: String,
+			default: '',
+		},
 	},
 	data() {
 		return {}

@@ -29,12 +29,17 @@
 				</nav>
 			</div>
 			<div class="col-md-2 px-5">
-				<el-dropdown>
+				<el-dropdown @command="handleClick">
 					<el-button type="primary">
 						切换语言<i class="el-icon-arrow-down el-icon--right"></i>
 					</el-button>
 					<el-dropdown-menu slot="dropdown">
-						<el-dropdown-item v-for="(item,index) in list" :key="index">{{item}}</el-dropdown-item>
+						<el-dropdown-item
+							v-for="(item, index) in langList"
+							:key="index"
+							:command="item.abbreviation"
+							>{{ item.lang }}</el-dropdown-item
+						>
 					</el-dropdown-menu>
 				</el-dropdown>
 			</div>
@@ -51,13 +56,19 @@ export default {
 			default: true,
 		},
 	},
-    data(){
-        return {
-            list:['language','中文']
-        }
-    },
+	data() {
+		return {
+			langList: [
+				{ lang: 'english', abbreviation: 'en' },
+				{ lang: '中文', abbreviation: 'zh' },
+				{ lang: 'German', abbreviation: 'de' },
+			],
+		}
+	},
 	methods: {
-	 
+		handleClick(lang) {
+			this.$store.commit('changeLanguage','zh')
+		},
 	},
 }
 </script>

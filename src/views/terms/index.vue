@@ -448,7 +448,7 @@
   </div>
 </template>
 <script>
-import Nav from "@c/nav.vue";
+import Nav from "@c/navbar.vue";
 import Footer from "@c/footer.vue";
 export default {
   name: "Privacy",

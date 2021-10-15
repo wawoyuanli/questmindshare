@@ -1,20 +1,17 @@
 <template>
   <div class="clogin">
-    <p class="h1">Login</p>
+    <p class="fs-3 h1 p-5">Login</p>
     <div class="formdata">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <label for="userName" class="col-md-12 mt-2"
-              >Username
-              <label style="color: red">*</label>
-            </label>
+        <div class="row mb-4">
+          <div class="col-md-8">
             <input
-              class="form-control col-md-12"
+              class="form-control col-md-12 p-2"
               :title="tipUsername"
               v-model="username"
               @blur="blur(username)"
               @input="input"
+              placeholder="username"
             />
             <p v-show="isShow" style="font-size: 10px; color: red">
               {{ errMess }} *
@@ -22,27 +19,24 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <label for="password" class="col-md-12  mt-2"
-              >Password
-              <label style="color: red">*</label>
-            </label>
+          <div class="col-md-8">
             <input
               type="password"
-              class="form-control col-md-12"
+              class="form-control col-md-12 p-2"
               :title="tipPassword"
               v-model="password"
               @blur="blur2(password)"
               @input="input2"
+                placeholder="password"
             />
             <p v-show="show" style="font-size: 10px; color: red">
               {{ errMessPassword }} *
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <p class="mb-2 col-md-12">Verify You're Human</p>
+        <div class="row my-3">
+          <div class="col-md-8">
+            <p class="col-md-12 text-start">Verify You're Human</p>
             <re-captcha
               class="col-md-12"
               :sitekey="sitekey"
@@ -52,7 +46,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-8">
             <div class="submit mt-5">
               <button
                 @click="login"
@@ -78,7 +72,6 @@
   </div>
 </template>
 <script>
-import $ from "jquery";
 import ReCaptcha from "@c/reCaptcha";
 export default {
   name: "Login",
@@ -112,37 +105,7 @@ export default {
         checkCode: _th.checkCode,
       });
     },
-    blur: function(username) {
-      // if (!username) {
-      //   this.errMess = "用户名不能为空！";
-      //   this.isShow = true;
-      // }
-    },
-    input: function(e) {
-      // if (!e.data) {
-      //   this.errMess = "用户名不能为空！";
-      //   this.isShow = true;
-      // } else {
-      //   this.isShow = false;
-      // }
-    },
-    blur2: function(password) {
-      // if (!password) {
-      //   this.errMessPassword = "密码不能为空！";
-      //   this.show = true;
-      // }
-    },
-    input2: function(e) {
-      // if (!e.data) {
-      //   this.errMessPassword = "用户名不能为空！";
-      //   this.show = true;
-      // } else {
-      //   this.show = false;
-      // }
-    },
-
     getValidateCode(code) {
-      // debugger
       if (code) {
         //认证成功
         this.checkCode = code;
@@ -187,7 +150,6 @@ export default {
         .toregister {
           margin-top: 20px;
           color: rgb(146, 135, 135);
-          margin-bottom: 10rem;
           a {
             text-decoration: underline;
             color: #ff6f00;

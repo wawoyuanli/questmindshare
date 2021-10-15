@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 module.exports = {
   //基本路径
   publicPath: process.env.NODE_ENV === 'production' ? '' : './',
@@ -24,7 +25,8 @@ module.exports = {
         'vue': 'vue/dist/vue.js',
         '@': path.resolve(__dirname, './src'),
         '@c': path.resolve(__dirname, './src/components')
-      }
+      },
+
     }
   },
   // 生产环境是否生成 sourceMap 文件
@@ -39,7 +41,7 @@ module.exports = {
       sass: {
         javascriptEnabled: true, //less 配置
         prependData: `@import "@/assets/less/varibles.less"`,
-        data:`@import "@/assets/less/varibles.less"`
+        data: `@import "@/assets/less/varibles.less"`
       }
     }
   },
@@ -57,7 +59,7 @@ module.exports = {
     hotOnly: false,
     proxy: {
       [process.env.VUE_APP_API]: {
-        target:'https://www.salientsurveys.com',// 'http://www.gentingconsulting.com',////'http://www.surveyleague.club',//"http://g36469v144.zicp.vip", //API服务器的地址  http://g36469v144.zicp.vip
+        target: 'https://www.salientsurveys.com',// 'http://www.gentingconsulting.com',////'http://www.surveyleague.club',//"http://g36469v144.zicp.vip", //API服务器的地址  http://g36469v144.zicp.vip
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_API]: '' // es5
@@ -81,6 +83,9 @@ module.exports = {
       patterns: [
         path.resolve(__dirname, './src/assets/less/varibles.less') //全局样式配置
       ],
-    }
+    },
+    plugins: [
+      new webpack.NormalModuleReplacementPlugin(/element-ui[\/\\]lib[\/\\]locale[\/\\]lang[\/\\]zh-CN/, 'element-ui/lib/locale/lang/en')
+    ]
   }
 }
