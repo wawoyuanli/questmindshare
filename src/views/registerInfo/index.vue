@@ -7,6 +7,19 @@
 			<div class="row pt-4">
 				<div class="col-md-7"></div>
 				<div class="col-md-5">
+					<div class="d-flex">
+						<div>000</div>
+						<ul class="d-flex">
+							<li class="col-md-2">service</li>
+							<li class="col-md-2">service</li>
+							<li class="col-md-2">service</li>
+							<li class="col-md-2">service</li>
+							<li>
+								<button class="btn" style="background: #fff">登录/注册</button>
+							</li>
+						</ul>
+					</div>
+
 					<div class="register-input">
 						<Register @register="register" ref="register" />
 					</div>
