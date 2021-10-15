@@ -1,5 +1,5 @@
 <template>
-	<div class="row pt-5 border-bottom pb-4" :style="{backgroundColor:bgColor}">
+	<div class="row pt-5 border-bottom pb-4">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<ul class="nav justify-content-center">

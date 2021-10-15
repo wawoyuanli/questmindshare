@@ -3,30 +3,49 @@
 		<div id="home"></div>
 		<div class="container-bg" :style="{ height: availHeight + 'px' }">
 			<div class="nav">
-				<div class="row col-md-12">
-					<div class="col-md-3 text-center fs-1 logo">questmindshare</div>
+				<div class="row col-md-12 d-flex justify-content-center align-items-center">
+					<div class="col-md-2 text-center fs-1 logo px-3">questmindshare</div>
 					<div class="col-md-9 d-flex">
 						<div class="col-md-2"></div>
 						<div class="d-flex header-nav-bg col-md-10">
-							<div class="col-md-3 text-center border-end" id="services">
+							<div class="col-md-2 text-center border-end" id="services">
 								<a href="#home" class="text-light">Services</a>
 							</div>
-							<div class="col-md-3 text-center border-end">
+							<div class="col-md-2 text-center border-end">
 								<a href="#home/partFour" class="text-light">Markets</a>
 							</div>
-							<div class="col-md-3 text-center border-end">
+							<div class="col-md-2 text-center border-end">
 								<a href="#partTwo" class="text-light">About</a>
 							</div>
 							<div
-								class="col-md-3 text-center"
+								class="col-md-2 text-center border-end"
 								@click="clickHandler('contact')"
 							>
 								Contact
 							</div>
+							<div class="col-md-2 text-center border-end">
+								<a href="#partTwo" class="text-light">Login</a>
+							</div>
+							<div class="col-md-2 text-center border-end">
+								<a href="#partTwo" class="text-light">sigin in</a>
+							</div>
 						</div>
+					</div>
+					<div class="col-md-1">
+						<el-dropdown>
+							<el-button type="primary">
+								更换语言<i class="el-icon-arrow-down el-icon--right"></i>
+							</el-button>
+							<el-dropdown-menu slot="dropdown">
+								<el-dropdown-item v-for="item in list" :key="item"
+									>{{item}}</el-dropdown-item
+								>
+							</el-dropdown-menu>
+						</el-dropdown>
 					</div>
 				</div>
 			</div>
+
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
@@ -295,8 +314,14 @@
 	</div>
 </template>
 <script>
+import NavBar from '@c/navbar.vue'
+import Navbar from '../../components/navbar.vue'
 export default {
 	name: 'HomePage',
+	components: {
+		NavBar: NavBar,
+	},
+
 	data() {
 		return {
 			availHeight: '',
@@ -314,12 +339,11 @@ export default {
 					text: 'Leverage a proprietary panel of consumers for any quantitative research study',
 				},
 			],
+			list: ['language', '中文'],
 		}
 	},
 	mounted() {
 		this.availHeight = window.screen.availHeight
-		// window.location.href = window.location.href.split('#')[0] + '#/home'
-		// debugger
 	},
 	methods: {
 		clickHandler(path) {
@@ -497,7 +521,6 @@ export default {
 			line-height: 300px;
 			margin: 0;
 		}
-
 	}
 	.part-six {
 		width: 100vw;
