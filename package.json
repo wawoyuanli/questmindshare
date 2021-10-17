@@ -36,7 +36,8 @@
     "popper.js": "^1.16.1",
     "style-resources-loader": "^1.4.1",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "yorkie": "^2.0.0"
   },
   "eslintConfig": {
     "root": true,
