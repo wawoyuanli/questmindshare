@@ -11,6 +11,7 @@ export function registerHandler(data) {
 /**获取验证码接口 6位数字验证码 */
 export function getCode(data) {
   return service.request({
+    // baseURL: "https://www.salientsurveys.com",
     method: "GET",
     url: `/manager/authorization/sys/sendEmail/102?email=${data.email}`,
     data
@@ -20,6 +21,7 @@ export function getCode(data) {
 /**获取国家码 */
 export function getCountryCode(data) {
   return service.request({
+    // baseURL: "https://www.salientsurveys.com",
     method: "GET",
     url: "/manager/authorization/sys/countryCode",
     data
@@ -36,10 +38,10 @@ export function login(data) {
     method: "POST",
     url: '/manager/authorization/sys/login',// "/manager/authorization/sys/login", 
     data,
-    xhrFields: {
-      withCredentials: true
-    },
-    crossDomain: true,
+    // xhrFields: {
+    //   withCredentials: true
+    // },
+    // crossDomain: true,
   })
 }
 /**修改密码 */

@@ -9,7 +9,6 @@
               class="form-control col-md-12 p-2"
               :title="tipUsername"
               v-model="username"
-              @blur="blur(username)"
               placeholder="username"
             />
             <p v-show="isShow" style="font-size: 10px; color: red">
@@ -24,7 +23,6 @@
               class="form-control col-md-12 p-2"
               :title="tipPassword"
               v-model="password"
-              @blur="blur2(password)"
                 placeholder="password"
             />
             <p v-show="show" style="font-size: 10px; color: red">

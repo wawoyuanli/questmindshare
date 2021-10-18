@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 module.exports = {
   //基本路径
   publicPath: process.env.NODE_ENV === 'production' ? '' : './',
@@ -17,6 +16,20 @@ module.exports = {
         symbolId: "icon-[name]",
         include: ["src/icons"]
       });
+    // config.module
+    //   .rule('expose1')
+    //   .test(require.resolve('jquery'))
+    //   .use()
+    //   .loader('expose-loader')
+    //   .options("jQuery")
+    //   .end()
+    // config.module
+    //   .rule('expose2')
+    //   .test(require.resolve('jquery'))
+    //   .use()
+    //   .loader('expose-loader')
+    //   .options("$")
+    //   .end()
   },
   configureWebpack: (config) => {
     config.resolve = { // 配置解析别名
@@ -25,8 +38,7 @@ module.exports = {
         'vue': 'vue/dist/vue.js',
         '@': path.resolve(__dirname, './src'),
         '@c': path.resolve(__dirname, './src/components')
-      },
-
+      }
     }
   },
   // 生产环境是否生成 sourceMap 文件
@@ -38,10 +50,9 @@ module.exports = {
     sourceMap: false,
     // css预设器配置项
     loaderOptions: {
-      sass: {
+      scss: {
         javascriptEnabled: true, //less 配置
-        prependData: `@import "@/assets/less/varibles.less"`,
-        data: `@import "@/assets/less/varibles.less"`
+        prependData: `@import "@/assets/less/varibles.less;"`
       }
     }
   },
@@ -59,7 +70,7 @@ module.exports = {
     hotOnly: false,
     proxy: {
       [process.env.VUE_APP_API]: {
-        target: 'https://www.salientsurveys.com',// 'http://www.gentingconsulting.com',////'http://www.surveyleague.club',//"http://g36469v144.zicp.vip", //API服务器的地址  http://g36469v144.zicp.vip
+        target:'https://www.salientsurveys.com',// 'http://www.gentingconsulting.com',////'http://www.surveyleague.club',//"http://g36469v144.zicp.vip", //API服务器的地址  http://g36469v144.zicp.vip
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_API]: '' // es5
@@ -81,11 +92,8 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        path.resolve(__dirname, './src/assets/less/varibles.less') //全局样式配置
+        path.resolve(__dirname, './src/assets/less/varibles.less')
       ],
-    },
-    plugins: [
-      new webpack.NormalModuleReplacementPlugin(/element-ui[\/\\]lib[\/\\]locale[\/\\]lang[\/\\]zh-CN/, 'element-ui/lib/locale/lang/en')
-    ]
+    }
   }
 }

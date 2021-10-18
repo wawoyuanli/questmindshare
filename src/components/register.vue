@@ -282,7 +282,7 @@
             <p class="ml-3" style="font-size: 18px">Australia</p>
           </div>
           <div class="mt-3" style="display: flex" v-if="countryCode === 'CA'">
-            <!-- <svg-icon icon-class="ca"></svg-icon> -->
+            <svg-icon icon-class="ca"></svg-icon>
             <p class="ml-3" style="font-size: 18px">Canada</p>
           </div>
           <div style="display: flex" v-if="countryCode === 'DE'">
@@ -359,7 +359,7 @@ import ReCaptcha from "@c/reCaptcha";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 export default {
-  name: "Register",
+  name: "RegisterComponent",
   components: {
     ReCaptcha,
     DatePicker,
@@ -426,7 +426,7 @@ export default {
   created: function() {},
   mounted() {
     let _th = this;
-    window.addEventListener("scroll", _th.handleScroll);
+    // window.addEventListener("scroll", _th.handleScroll);
 
     /**国家码获取 */
     getCountryCode()
@@ -439,20 +439,9 @@ export default {
       });
   },
   methods: {
-    handleScroll() {
-      const _th = this;
-      let scrollTop = window.pageYOffset;
-      //设置背景颜色的透明读
-      // if (scrollTop < 10) {
-      //   document.getElementById("nav").classList.remove("nav-bg");
-      //   _th.color = "#fff";
-      //   _th.isActive = false;
-      // } else if (scrollTop > 10) {
-      //   document.getElementById("nav").classList.add("nav-bg");
-      //   _th.isActive = true;
-      //   _th.color = "#ff6f00";
-      // }
-    },
+    // handleScroll() {
+    //   const _th = this;
+    // },
     selectYear: function() {
       this.dateYear;
       console.log(this.dateYear);

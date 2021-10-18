@@ -30,6 +30,10 @@
         </div>
       </div>
     </div>
+    varibles
+    <!-- http://localhost:9192/manager/authorization/sys/login -->
+    <!-- http://localhost:9192/manager/authorization/sys/login -->
+    <!-- http://localhost:9192/manager/authorization/sys/register/100 -->
     <Dialog ref="myConfirm" @userBehavior="userBehaviorFun"></Dialog>
     <!-- <Footer /> -->
   </div>
@@ -89,9 +93,10 @@ export default {
       /**登录接口 */
       login(requestData)
         .then(function(res) {
+          debugger
           if (res.data.code === 0) {
             // _th.$router.push('/registerInfo')
-            window.location.href = process.env.VUE_APP_URL; //登录成功跳转地址
+            // window.location.href = process.env.VUE_APP_URL; //登录成功跳转地址
           } else if (res.data.code === 500) {
             _th.$refs.myConfirm.content = res.data.msg;
             _th.$refs.myConfirm.isShowConfirm = true;
