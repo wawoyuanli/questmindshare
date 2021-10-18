@@ -168,10 +168,5 @@ export default {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	min-height: 100vh;
-
-	.reset-password {
-		// width: 90%;
-		// margin: 0 auto;
-	}
 }
 </style>

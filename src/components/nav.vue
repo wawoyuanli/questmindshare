@@ -7,23 +7,21 @@
 					<a
 						class="nav-link active text-light fs-5"
 						aria-current="page"
-						href="#"
+						href="#/home"
 						>Services</a
 					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
 					<a
 						class="nav-link fs-5 text-light"
-						href="#"
-						@click="clickHandler('home')"
+						href="#/home"
 						>Markets</a
 					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
 					<a
 						class="nav-link fs-5 text-light"
-						href="#"
-						@click="clickHandler('home')"
+						href="#/home"
 						>About</a
 					>
 				</li>
@@ -35,16 +33,14 @@
 				<li class="nav-item col-md-2 text-center">
 					<a
 						class="nav-link fs-5 text-light"
-						href="#"
-						@click="clickHandler('home')"
+						href="#/login"
 						>Login</a 
 					>
 				</li>
 				<li class="nav-item col-md-2 text-center">
 					<a
 						class="nav-link fs-5 text-light"
-						href="#"
-						@click="clickHandler('home')"
+						href="#/registerInfo"
 						>Sigin in</a
 					>
 				</li>

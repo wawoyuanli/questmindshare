@@ -8,22 +8,22 @@
 				<nav class="navbar navbar-expand-sm" id="nav">
 					<ul class="navbar-nav">
 						<li class="nav-item col-md-4">
-							<a class="nav-link fs-4" href="#">Services</a>
+							<a class="nav-link fs-4" href="#/home">Services</a>
 						</li>
 						<li class="nav-item col-md-3 fs-4">
-							<a class="nav-link" href="#">Markets</a>
+							<a class="nav-link" href="#/home">Markets</a>
 						</li>
 						<li class="nav-item col-md-3 fs-4">
-							<a class="nav-link" href="#">About</a>
+							<a class="nav-link" href="#/home">About</a>
 						</li>
 						<li class="nav-item col-md-3 fs-4">
-							<a class="nav-link" href="#">Contact</a>
+							<a class="nav-link" href="#/contact">Contact</a>
 						</li>
 						<li class="nav-item col-md-3 fs-4">
-							<a class="nav-link" href="#">Login</a>
+							<a class="nav-link" href="#/login">Login</a>
 						</li>
 						<li class="nav-item col-md-3 fs-4">
-							<a class="nav-link" href="#">Sign in</a>
+							<a class="nav-link" href="#/registerInfo">Sign in</a>
 						</li>
 					</ul>
 				</nav>

@@ -341,7 +341,7 @@
               type="submit"
               name="register"
               value="Register"
-              class="btn btn-primary btn-block btn-lg  col-md-12"
+              class="btn btn-primary btn-block btn-lg col-md-12 py-3"
               @click="registerHandler"
             />
           </div>
@@ -543,6 +543,5 @@ export default {
 <style scoped lang="less">
 .register-wrap {
   min-height: 75vh;
-  padding-bottom: 3rem;
 }
 </style>
