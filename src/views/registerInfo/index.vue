@@ -28,10 +28,10 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row py-5">
 				<div class="col-md-7"></div>
 				<div class="col-md-5">
-					<div class="register-input">
+					<div class="register-input py-3">
 						<Register @register="register" ref="register" />
 					</div>
 				</div>
