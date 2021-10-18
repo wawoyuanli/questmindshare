@@ -15,7 +15,7 @@ import i18n from "./lang/i18n.js";
 import locale from "element-ui/lib/locale/lang/en";
 import less from "less";
 import store from "./store/index.js";
-// import "./icons";
+import "./icons";
 Vue.use(ElementUI, { locale });
 Vue.use(less);
 new Vue({

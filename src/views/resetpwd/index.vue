@@ -1,162 +1,177 @@
 <template>
-  <div class="resetpwd">
-    <Nav id="borderBottom" bgColor='#333333'></Nav>
-    <div class="container pt">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="h2 text-center">Reset my password</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-          <label class="mt-3 mb-2">username:*</label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="username"
-            maxlength="30"
-            minlength="6"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-          <div class="row">
-            <div class="col-md-6">
-              <label class="mt-3 mb-2"> email * </label>
-              <input
-                type="text"
-                class="form-control"
-                v-model="email"
-                maxlength="30"
-                minlength="0"
-              />
-            </div>
-            <div class="col-md-6">
-              <label class="mt-4 col-md-12" style="opacity: 0"> code </label>
-              <input
-                type="submit"
-                class="col-md-12 btn btn-primary"
-                value="send verification code"
-                @click="sendCode"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-          <label class="mt-3 mb-2"> Email Verification Code * </label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="code"
-            maxlength="6"
-            minlength="6"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-          <label class="mt-3 mb-2">password:*</label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="password"
-            maxlength="20"
-            minlength="6"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-          <input
-            type="submit"
-            class="mt-4 col-md-12 btn btn-primary mb-4"
-            @click="resetPwd"
-          />
-        </div>
-      </div>
-    </div>
-    <Footer />
-  </div>
+	<div class="resetpwd">
+		<div class="row pt-4 pb-4">
+			<div class="d-flex">
+				<div class="col-md-5 text-light fs-2 px-5">questmindshare</div>
+				<ul class="d-flex col-md-7">
+					<li class="col-md-2 fs-5">
+						<a href="#/home" class="text-light">Services</a>
+					</li>
+					<li class="col-md-2 text-light fs-5">
+						<a href="#/home" class="text-light">Markets</a>
+					</li>
+					<li class="col-md-2 text-light fs-5">
+						<a href="#/home" class="text-light">About</a>
+					</li>
+					<li class="col-md-2 text-light fs-5">
+						<a href="#/contact" class="text-light">Contact</a>
+					</li>
+					<li>
+						<button class="btn" style="background: #fff">
+							<div class="d-flex">
+								<a class="text-dark" href="#">登录/</a>
+								<a href="#/registerInfo" class="text-dark">注册</a>
+							</div>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row pt-5 mt-5">
+			<div class="col-md-7"></div>
+			<div class="col-md-4 bg-light">
+				<div class="reset-password">
+					<p class="fs-4 text-center py-4">Reset my password</p>
+					<div class="col-md-10" style="margin: 0 auto">
+						<input
+							type="text"
+							class="form-control py-2"
+							v-model="username"
+							maxlength="30"
+							minlength="6"
+							placeholder="username"
+						/>
+					</div>
+					<div class="col-md-10 d-flex my-3" style="margin: 0 auto">
+						<div class="col-md-7">
+							<input
+								type="text"
+								class="form-control col-md-12 py-2"
+								v-model="email"
+								maxlength="30"
+								minlength="0"
+								placeholder="email"
+							/>
+						</div>
+						<div class="col-md-6">
+							<div class="col-md-12 mx-3">
+								<input
+									type="submit"
+									class="btn btn-primary py-2"
+									value="send verification code"
+									@click="sendCode"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="d-flex my-3 col-md-10" style="margin: 0 auto">
+						<div class="col-md-7">
+							<input
+								type="text"
+								class="form-control col-md-3 py-2"
+								v-model="email"
+								maxlength="30"
+								minlength="0"
+								placeholder="code"
+							/>
+						</div>
+						<div class="col-md-5 mx-2 py-2">Email Verification Code</div>
+					</div>
+					<div class="col-md-10" style="margin: 0 auto">
+						<input
+							type="text"
+							class="form-control py-2"
+							v-model="password"
+							maxlength="20"
+							minlength="6"
+							placeholder="password"
+						/>
+					</div>
+					<div class="col-md-10" style="margin: 0 auto">
+						<input
+							type="submit"
+							class="mt-4 col-md-12 btn btn-primary mb-4  py-3"
+							@click="resetPwd"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 <script>
-import Nav from "@c/nav.vue";
-import Footer from "@c/footer.vue";
-import { resetPwd, getCode } from "@/api/login.js";
+import Nav from '@c/navbar.vue'
+import Footer from '@c/footer.vue'
+import { resetPwd, getCode } from '@/api/login.js'
 export default {
-  name: "Resetpwd",
-  components: {
-    Nav,
-    Footer,
-  },
+	name: 'Resetpwd',
+	components: {
+		Nav,
+		Footer,
+	},
 
-  data() {
-    return {
-      isActive: true,
-      color: "#26a4c3",
-      username: "",
-      email: "",
-      code: "",
-      password: "",
-    };
-  },
-  mounted() {
-    document.getElementById("borderBottom").classList.add("borderBottom");
-  },
-  methods: {
-    sendCode: function() {
-      let _th = this;
-      let req = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
-      if (!req.test(_th.email)) {
-        alert("邮箱格式不正确");
-        return false;
-      }
-      getCode({ email: _th.email })
-        .then(function(res) {
-          console.log(res);
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
-    },
-    resetPwd: function() {
-      let _th = this;
-      let data = {
-        username: _th.username,
-        email: _th.email,
-        remark: _th.code,
-        password: _th.password,
-      };
-      resetPwd(data)
-        .then(function(res) {
-          console.log(res);
-          _th.$router.push("/login");
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
-    },
-  },
-};
+	data() {
+		return {
+			isActive: true,
+			color: '#26a4c3',
+			username: '',
+			email: '',
+			code: '',
+			password: '',
+		}
+	},
+	mounted() {
+		// document.getElementById('borderBottom').classList.add('borderBottom')
+	},
+	methods: {
+		sendCode: function () {
+			let _th = this
+			let req =
+				/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+			if (!req.test(_th.email)) {
+				alert('邮箱格式不正确')
+				return false
+			}
+			getCode({ email: _th.email })
+				.then(function (res) {
+					console.log(res)
+				})
+				.catch(function (err) {
+					console.log(err)
+				})
+		},
+		resetPwd: function () {
+			let _th = this
+			let data = {
+				username: _th.username,
+				email: _th.email,
+				remark: _th.code,
+				password: _th.password,
+			}
+			resetPwd(data)
+				.then(function (res) {
+					console.log(res)
+					_th.$router.push('/login')
+				})
+				.catch(function (err) {
+					console.log(err)
+				})
+		},
+	},
+}
 </script>
 <style lang="less" scoped>
 .resetpwd {
-  .container {
-    min-height: 75vh;
-  }
-  .pt {
-    padding-top: 8rem;
-    label {
-      font-size: 18px;
-      font-family: "Liberation Sans";
-    }
-  }
+	background-image: url('../../assets/images/3.png');
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	min-height: 100vh;
+
+	.reset-password {
+		// width: 90%;
+		// margin: 0 auto;
+	}
 }
 </style>

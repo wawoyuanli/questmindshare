@@ -4,7 +4,7 @@
     <div class="login-form">
       <div class="row pt-4 pb-4">
         <div class="d-flex">
-          <div class="col-md-5 text-light fs-2">questmindshare</div>
+          <div class="col-md-5 text-light fs-2 px-5">questmindshare</div>
           <ul class="d-flex col-md-7">
             <li class="col-md-2  fs-5"><a href="#/home" class="text-light">Services</a></li>
             <li class="col-md-2 text-light fs-5"><a href="#/home" class="text-light" >Markets</a></li>

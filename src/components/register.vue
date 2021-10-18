@@ -356,13 +356,13 @@ import $ from "jquery";
 import { getCode, getCountryCode } from "@/api/login";
 import ReCaptcha from "@c/reCaptcha";
 /**日期选择器 */
-import DatePicker from "vue2-datepicker";
+// import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 export default {
   name: "RegisterComponent",
   components: {
     ReCaptcha,
-    DatePicker,
+    // DatePicker,
   },
   data() {
     return {
