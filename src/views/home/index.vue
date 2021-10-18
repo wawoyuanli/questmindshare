@@ -514,14 +514,14 @@ export default {
 			padding: 100px 0px;
 		}
 		.swiper-item-wrap {
-			width: 832px;
-			height: 500px;
-			position: absolute;
-			background-color: rgba(rgb(240, 15, 15), 0.7);
-			mix-blend-mode: multiply; //混合颜色
+			// width: 832px;
+			// height: 500px;
+			// position: absolute;
+			// background-color: rgba(rgb(240, 15, 15), 0.7);
+			// mix-blend-mode: multiply; //混合颜色
 			border-radius: 10px;
 			color: #fff;
-			top: 0;
+			// top: 0;
 		}
 		.text {
 			color: #fff;

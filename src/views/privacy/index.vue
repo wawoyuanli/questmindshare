@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <!--title-->
         <div class="row">
-          <div class="col-md-12 h3 text-center">{{ $t("privacy.row008") }}</div>
+          <div class="col-md-12 fs-3 text-center">{{ $t("privacy.row008") }}</div>
         </div>
         <!--content-->
         <div class="row">

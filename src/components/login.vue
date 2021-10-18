@@ -10,7 +10,6 @@
               :title="tipUsername"
               v-model="username"
               @blur="blur(username)"
-              @input="input"
               placeholder="username"
             />
             <p v-show="isShow" style="font-size: 10px; color: red">
@@ -26,7 +25,6 @@
               :title="tipPassword"
               v-model="password"
               @blur="blur2(password)"
-              @input="input2"
                 placeholder="password"
             />
             <p v-show="show" style="font-size: 10px; color: red">

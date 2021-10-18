@@ -4,7 +4,7 @@
     <div class="terms-content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 h3 mb-3">Terms And Conditions</div>
+          <div class="col-md-12 h3 mb-3 fs-3">Terms And Conditions</div>
         </div>
         <div class="row">
           <div class="col-md-1"></div>

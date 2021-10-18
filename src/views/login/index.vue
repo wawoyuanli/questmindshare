@@ -6,15 +6,15 @@
         <div class="d-flex">
           <div class="col-md-5 text-light fs-2">questmindshare</div>
           <ul class="d-flex col-md-7">
-            <li class="col-md-2 text-light fs-5">Services</li>
-            <li class="col-md-2 text-light fs-5">Markets</li>
-            <li class="col-md-2 text-light fs-5">About</li>
-            <li class="col-md-2 text-light fs-5">Contact</li>
+            <li class="col-md-2  fs-5"><a href="#/home" class="text-light">Services</a></li>
+            <li class="col-md-2 text-light fs-5"><a href="#/home" class="text-light" >Markets</a></li>
+            <li class="col-md-2 text-light fs-5"><a href="#/home" class="text-light">About</a></li>
+            <li class="col-md-2 text-light fs-5"><a href="#/contact" class="text-light">Contact</a></li>
             <li>
               <button class="btn" style="background: #fff">
                 <div class="d-flex">
-                  <a class="text-dark" href="/login">登录/</a>
-                  <a href="/registerInfo">注册</a>
+                  <a class="text-dark" href="#">登录/</a>
+                  <a href="#/registerInfo" class="text-dark">注册</a> 
                 </div>
               </button>
             </li>
@@ -120,7 +120,7 @@ export default {
       width: 80%;
       height: auto;
       background: #fff;
-      height: 70%;
+      min-height: 70%;
       border-radius: 10px;
     }
   }
