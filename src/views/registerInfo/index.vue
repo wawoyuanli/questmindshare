@@ -3,7 +3,9 @@
 		<div class="register">
 			<div class="row pt-4 pb-4">
 				<div class="d-flex">
-					<div class="col-md-5 text-light fs-2 px-3">questmindshare</div>
+					<a class="col-md-5 text-light fs-2 px-5" href="#/home"
+						>questmindshare</a
+					>
 					<ul class="d-flex col-md-7">
 						<li class="col-md-2 fs-5">
 							<a href="#/home" class="text-light">Services</a>

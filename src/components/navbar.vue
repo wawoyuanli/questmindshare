@@ -67,7 +67,7 @@ export default {
 	},
 	methods: {
 		handleClick(lang) {
-			this.$store.commit('changeLanguage','zh')
+			this.$i18n.locale = lang
 		},
 	},
 }

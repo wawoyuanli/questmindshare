@@ -269,32 +269,32 @@
 				<div class="col-md-8" style="color: red">
 					<!-- 美国-US、中国-CN、英国-GB、澳大利亚-AU、加拿大-CA、德国-DE、法国-FR -->
 					<div class="mt-3" style="display: flex" v-if="countryCode === 'US'">
-						<!-- <svg-icon icon-class="us"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">United States</p>
+						<svg-icon icon-class="us"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">United States</p>
 					</div>
-					<div class="mt-3" style="display: flex" v-if="countryCode === 'CN'">
-						<!-- <svg-icon icon-class="cn"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">China</p>
+					<div class="mx-3" style="display: flex" v-if="countryCode === 'CN'">
+						<svg-icon icon-class="cn"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">China</p>
 					</div>
-					<div class="mt-3" style="display: flex" v-if="countryCode === 'GB'">
-						<!-- <svg-icon icon-class="gb"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">United Kingdom</p>
+					<div class="mx-3" style="display: flex" v-if="countryCode === 'GB'">
+						<svg-icon icon-class="gb"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">United Kingdom</p>
 					</div>
-					<div class="mt-3" style="display: flex" v-if="countryCode === 'AU'">
-						<!-- <svg-icon icon-class="au"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">Australia</p>
+					<div class="mx-3" style="display: flex" v-if="countryCode === 'AU'">
+						<svg-icon icon-class="au"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">Australia</p>
 					</div>
-					<div class="mt-3" style="display: flex" v-if="countryCode === 'CA'">
+					<div class="mx-3" style="display: flex" v-if="countryCode === 'CA'">
 						<svg-icon icon-class="ca"></svg-icon>
-						<p class="ml-3" style="font-size: 18px">Canada</p>
+						<p class="mx-3" style="font-size: 18px">Canada</p>
 					</div>
 					<div style="display: flex" v-if="countryCode === 'DE'">
-						<!-- <svg-icon icon-class="de"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">Germany</p>
+						<svg-icon icon-class="de"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">Germany</p>
 					</div>
-					<div class="mt-3" style="display: flex" v-if="countryCode === 'FR'">
-						<!-- <svg-icon icon-class="fr"></svg-icon> -->
-						<p class="ml-3" style="font-size: 18px">France</p>
+					<div class="mx-3" style="display: flex" v-if="countryCode === 'FR'">
+						<svg-icon icon-class="fr"></svg-icon>
+						<p class="mx-3" style="font-size: 18px">France</p>
 					</div>
 				</div>
 			</div>
