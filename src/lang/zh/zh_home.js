@@ -1,47 +1,36 @@
-export default {
-  earnMoney: '通过成功完成我们的付费调查和优惠来赚钱',
-  refer: '推荐您的朋友并赚取额外收入',
-  join: '加入我们',
-  /**第二部分 */
-  easyTitle: '简单的过程和简单的步骤',
-  signUpFree: '1.自由',
-  signUpDesc: '免费注册并通过我们的安全审核',
-  completeOffers: '2.完全提供',
-  completeOffersDesc: '查看您兴趣的产品和服务，并提供反馈。',
-  getPaid: "3.得到报酬",
-  getPaidDesc: '查看您的帐户余额生长然后请求支付。',
-  /**第三部分 */
-  our: "我们的成就",
-  second_title: "根据您的人口统计资料，Salient Surveys将为您提供付费研究和市场研究机会，并为您提供报酬。",
-  monthly: '每月活跃用户',//26912
-  total: '迄今为止支付总额', //$3819018
-  partner: '我们值得信赖的伙伴',//90
-  /**第四部分 */
-  testimonials: "感言",//感言
-  user1: 'WangQiang (ShangHai, CN)',
-  user1Text: `我是一个普通的软件开发工程师，
-  我的妻子因流行病而失去了工作，
-  家里有两个孩子，非常感谢你，给我这个机会赚钱，
-  让我们的生活变得更好，再次感谢你......`,
-  user2: "Harry (London, GB)",
-  user2Text: `非常感谢您的邀请。
-  我们每个人都有权表达自己的意见，
-  这是民主和自由社会的基础，可以帮助别人。
-  这是一个非常神圣的事情`,
-  user3: 'Allen (Florida, US)',
-  user3Text: `我的朋友在这里介绍了我，
-  我首次通过尝试的态度登记。
-  直到我得到第一次付款，
-  我很开心，我的建议帮助了他人，
-  这是一件好事，我也非常感谢我的朋友......`,
-  /**第五部分 */
-  fiveTitle: "你还在等什么?",
-  fiveText1: `我们需要你。 你的意见事项`,
-  fiveText2: `Salient Surveys正在寻找人们参加付费的在线调查。`,
-  why: '为什么要注册Salient Surveys？',
-  reasons: 'Salient Surveys为何如此独特以及其背后的原因。',
-  cashPayments: "现金付款",
-  dataPrivacy: "资料私隐",
-  supportTeam: "支持团队",
-  anydevices:'任何设备'
+export default{
+  service: '服务',
+  markets: '市场',
+  about: '关于我们',
+  contact: '联系',
+  login: '登录',
+  sigin: '注册',
+  lang: '更换语言',
+  partone1: '随时随地的提取您需要的精确见解',
+  partone2: '现在开始',
+  parttwo1: '与业界最优秀的人合作，取得卓越的成就',
+  parttwo2: '构建可信的数据模型， 利用我们的全球小组，与您需要的确切受访者一起为您的研究提供支持，是消费者和企业的首选。',
+  parttwo2_panel: '控制版',
+  parttwo2_panel_content: '从行业到非政府组织，从消费者音乐听众到企业 C 级执行官， Quest的数百万人参与的小组提供了高质量的数据集。',
+  parttwo2_service: '服务',
+  parttwo2_service_content:'给你最好的服务。Quest的服务水平，无论是项目管理、编程还是咨询，都专门满足您的需求。',
+  parttwo2_technology: '技术',
+  parttwo2_technology_content:'自由团队与建设并与高级团队合作，提供优质的编码和托管服务。',
+  parttwo2_tools: '工具',
+  parttwo2_tools_content: '各种自研的工具，满足你的需求。',
+  partthree_title: '认识我们的全球观众',
+  partthree_content1: '	Quest是每个主要市场的标准供应商。在全球35个国家/地区拥有无与伦比的小组成员，具有独特的优势，可以满足任何专家组需求。',
+  partthree_content2: '	无与伦比的可行性和定价与行业响应率',
+  partthree_content3: '超过20家子供应商',
+  partthree_content4: '全球超过400000名直接或间接小组成员',
+  partfour: 'All The Latest',
+  card1: '客户服务对研究客户意味着什么？',
+  card2: '市场研究小组 - 来自小组成员 POV',
+  card3:'WIRE：反思、韧性和提升——网络研讨会回顾',
+  swiper1: '需要为您的年度跟踪器定制样本策略?',
+  swiper2: '成为您团队延伸的合作伙伴。',
+  swiper3: '利用专有的消费者小组进行任何定量研究',
+  partfive: '订阅时事通讯',
+  partfive2: '与我们一起成长',
+  subscribe:"订阅"
 }

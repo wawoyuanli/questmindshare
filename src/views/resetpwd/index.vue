@@ -29,7 +29,7 @@
 		</div>
 		<div class="row pt-5 mt-5">
 			<div class="col-md-7"></div>
-			<div class="col-md-4 bg-light">
+			<div class="col-md-4 bg-light py-5">
 				<div class="reset-password">
 					<p class="fs-4 text-center py-4">Reset my password</p>
 					<div class="col-md-10" style="margin: 0 auto">
@@ -57,9 +57,10 @@
 							<div class="col-md-12 mx-3">
 								<input
 									type="submit"
-									class="btn btn-primary py-2"
+									class="btn  py-2"
 									value="send verification code"
 									@click="sendCode"
+                  style="background:#ff6f00;color:#fff"
 								/>
 							</div>
 						</div>
@@ -76,7 +77,7 @@
 								placeholder="code"
 							/>
 						</div>
-						<div class="col-md-5 mx-2 py-2">Email Verification Code</div>
+						<div class="col-md-5 mx-3 py-2">Email Verification Code</div>
 					</div>
 					<div class="col-md-10" style="margin: 0 auto">
 						<input
@@ -88,12 +89,12 @@
 							placeholder="password"
 						/>
 					</div>
-					<div class="col-md-10" style="margin: 0 auto">
-						<input
-							type="submit"
-							class="mt-4 col-md-12 btn btn-primary mb-4  py-3"
+					<div class="col-md-10 mt-4" style="margin: 0 auto">
+						<button
+							class="mt-4 col-md-12 btn  mb-4  py-3"
 							@click="resetPwd"
-						/>
+              style="background:#ff6f00;border-radius:25px;color:#fff"
+						>提交</button>
 					</div>
 				</div>
 			</div>

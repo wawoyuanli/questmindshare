@@ -1,66 +1,35 @@
 export default {
-  /**第一部分 */
-  earnMoney: 'Earn Money by successfully completing our paid surveys and offers',
-  refer: 'Refer your friends and earn additional income',
-  join: 'Join Us',
-  /**第二部分 */
-  easyTitle: 'Easy Process & Easy Steps',
-  signUpFree: '1.Sign Up Free',
-  signUpDesc: 'Free registration and pass our security audit',
-  completeOffers: '2.Complete Offers',
-  completeOffersDesc: 'Check out products and services of your interest and give feedback.',
-  getPaid: "3.Get Paid",
-  getPaidDesc: 'Watch your account balance grow then request a payout.',
-  /**第三部分 */
-  our: "Our Achievement",
-  second_title:"Based on your demographics, Salient Surveys will provide you with paid research and market research opportunities and will provide you with remuneration.",
-  monthly: 'Total number of users',//26912
-  total: 'Total Payout To Date', //$3819018
-  partner: 'Our Trusted Partners',//90
-  /**第四部分 */
-  testimonials: "Testimonials",//感言
-  user1: 'WangQiang (ShangHai, CN)',
-  user1Text: `I am an ordinary software development engineer,
-    my wife lost her job because of the epidemic,
-    there are two children at home,thank you very much for giving me this opportunity to make money,
-    let our life become better, thank you again......`,
-  user2: "Harry (London, GB)",
-  user2Text: `Thank you very much for your invitation. 
-    Each of us has the right to express our own opinions,
-    which is the foundation of a democratic and free society and can help others.
-    This is a very sacred thing.`,
-  user3: 'Allen (Florida, US)',
-  user3Text: `My friend introduced me here,
-    and I registered it for the first time with the attitude of trying.
-    Until I got the first payment,
-    I was very happy, and my advice helped others,
-    which was a great thing, and I am also very grateful to my friend...`,
-  /**第五部分 */
-  fiveTitle: "What are you waiting for?",
-  fiveText1: `We need you. Your opinion matters.
-    `,
-    fiveText2:`Salient Surveys is looking for people to participate in Paid Online Surveys.`,
-  /**第六部分 左标题*/
-  company: 'Company',
-  home: 'Home',
-  about: 'About Us',
-  faq: 'FAQ',
-  contact: 'Contact Us',
-  /**右标题 */
-  support: 'Support',
-  terms: "Terms And Conditions",
-  policy: 'Anti-Spam Policy',
-  agreement: 'Affiliate Agreement',
-  privacy: 'Privacy Policy',
-  info: `Don't Sell My Info`,
-  bottom: '© 2021 Genting Consulting Inc. All rights reserved.',
-
-  /**为什么要注册云顶咨询？ */
-  why: 'Why sign up to Salient Surveys?',
-  reasons: 'Why Salient Surveys is unique and reasons behindit.',
-  cashPayments: "Cash Payments",
-  dataPrivacy: "Data Privacy",
-  supportTeam: "Support Team",
-  anydevices:'Any devices'
-  
+  service: 'Services',
+  markets: 'Markets',
+  about: 'About',
+  contact: 'Contact',
+  login: 'Login',
+  sigin: 'sigin in',
+  lang: 'exchange language',
+  partone1: 'Extract the precise insights you need, anytime, anywhere.',
+  partone2: 'Get Started Now',
+  parttwo1: 'Cooperate with the best people in the industry to achieve outstanding achievements',
+  parttwo2: 'Building a credible data model, using our global team, and supporting your research with the exact interviewees you need, is the first choice for consumers and businesses.',
+  parttwo2_panel: 'Panel',
+  parttwo2_panel_content: 'From industries to non-governmental organizations, from consumer music listeners to corporate C-level executives, Quest’s millions of people participate in teams that provide high-quality data sets.',
+  parttwo2_service: 'Service',
+  parttwo2_service_content:`Give you the best service. Quest's service level, whether it is project management, programming or consulting, is tailored to meet your needs。`,
+  parttwo2_technology: 'technology',
+  parttwo2_technology_content:'Free team building and cooperating with senior teams to provide high-quality coding and hosting services.',
+  parttwo2_tools: 'Tools',
+  parttwo2_tools_content: 'Various self-developed tools to meet your needs。',
+  partthree_title: 'Meet our global audience',
+  partthree_content1: 'Quest is a standard supplier in every major market. With unparalleled team members in 35 countries/regions around the world, it has unique advantages and can meet the needs of any expert team.',
+  partthree_content2: 'Unparalleled feasibility and pricing and industry response rate',
+  partthree_content3: 'More than 20 sub-suppliers',
+  partthree_content4: 'More than 400,000 direct or indirect team members worldwide',
+  card1: 'What does customer service mean to researcher clients?',
+  card2: 'Market Research Panels – from a Panelist POV',
+  card3: 'WIRE: Reflection, Resilience and Elevation – Webinar Recap',
+  swiper1: 'Need a customized sample strategy for your annual tracker?',
+  swiper2: 'The partner that becomes an extension of your team.',
+  swiper3: 'Leverage a proprietary panel of consumers for any quantitative research study',
+  partfive: 'Subscribe to newsletter',
+  partfive2: 'Get Updated With Us',
+  subscribe:"Subscribe"
 }

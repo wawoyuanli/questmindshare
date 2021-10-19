@@ -11,36 +11,42 @@
 						<div class="col-md-2"></div>
 						<div class="d-flex header-nav-bg col-md-10">
 							<div class="col-md-2 text-center border-end" id="services">
-								<a href="#home" class="text-light">Services</a>
+								<a href="#home" class="text-light">{{ $t('home.service') }}</a>
 							</div>
 							<div class="col-md-2 text-center border-end">
-								<a href="#home/partFour" class="text-light">Markets</a>
+								<a href="#home/partFour" class="text-light">{{
+									$t('home.markets')
+								}}</a>
 							</div>
 							<div class="col-md-2 text-center border-end">
-								<a href="#partTwo" class="text-light">About</a>
+								<a href="#partTwo" class="text-light">{{ $t('home.about') }}</a>
 							</div>
 							<div
 								class="col-md-2 text-center border-end"
 								@click="clickHandler('contact')"
 							>
-								Contact
+								{{ $t('home.contact') }}
 							</div>
-							<div class="col-md-2 text-center border-end" @click="clickHandler('login')">
-								<a href="#partTwo" class="text-light">Login</a>
+							<div
+								class="col-md-2 text-center border-end"
+								@click="clickHandler('login')"
+							>
+								<a href="#partTwo" class="text-light">{{ $t('home.login') }}</a>
 							</div>
-							<div class="col-md-2 text-center border-end" @click="clickHandler('registerInfo')">
-								<a href="#partTwo" class="text-light">sigin in</a>
+							<div
+								class="col-md-2 text-center border-end"
+								@click="clickHandler('registerInfo')"
+							>
+								<a href="#partTwo" class="text-light">{{ $t('home.sigin') }}</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-1 px-3">
 						<el-dropdown @command="handleClick">
 							<span class="el-dropdown-link" style="color: #409eff">
-								更换语言<i class="el-icon-arrow-down el-icon--right"></i>
+								{{ $t('home.lang')
+								}}<i class="el-icon-arrow-down el-icon--right"></i>
 							</span>
-							<!-- <el-button type="primary">
-								更换语言<i class="el-icon-arrow-down el-icon--right"></i>
-							</el-button> -->
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item
 									v-for="item in list"
@@ -60,14 +66,12 @@
 			<div class="row pt-5"></div>
 			<div class="left-content row pt-5">
 				<div class="col-md-1"></div>
-				<div class="col-md-4 fs-4 text-start">
-					随时随地的提取您需要的精确见解
-				</div>
+				<div class="col-md-4 fs-4 text-start"></div>
 			</div>
 			<div class="left-content row">
 				<div class="col-md-1"></div>
 				<div class="col-md-5 fs-4 text-start mt-3">
-					行业领先的数据收集服务和技术，可满足您的需求。
+					{{ $t('home.partone1') }}
 				</div>
 			</div>
 			<div class="row pt-5">
@@ -77,7 +81,7 @@
 						class="btn btn-lg col-md-4 fs-4 get-started"
 						@click="registerHandler"
 					>
-						Get Started Now
+						{{ $t('home.partone2') }}
 					</button>
 				</div>
 			</div>
@@ -85,7 +89,7 @@
 		<div class="part-two">
 			<div id="partTwo"></div>
 			<div class="row text-center title">
-				<div class="col-md-12">与业界最优秀的人合作，取得卓越的成就</div>
+				<div class="col-md-12">{{ $t('home.parttwo1') }}</div>
 			</div>
 			<div class="content" style="">
 				<div class="row opacity-bg">
@@ -93,8 +97,7 @@
 						<div class="pt-5 mt-5"></div>
 						<div class="pt-5 mt-5"></div>
 						<div class="lh-lg">
-							构建可信的数据模型， 利用我们的全球小组，
-							与您需要的确切受访者一起为您的研究提供支持，是消费者和企业的首选。
+							{{ $t('home.parttwo2') }}
 						</div>
 					</div>
 					<div
@@ -117,10 +120,11 @@
 									width="64px"
 									class="mt-2 p-2"
 								/>
-								<p class="pt-3 text-start fs-4 panel p-2">控制版</p>
+								<p class="pt-3 text-start fs-4 panel p-2">
+									{{ $t('home.parttwo2_panel') }}
+								</p>
 								<div class="text-start pt-4 lh-lg p-2">
-									从行业到非政府组织，从消费者音乐听众到企业 C 级执行官，
-									Quest的数百万人参与的小组提供了高质量的数据集。
+									{{ $t('home.parttwo2_panel_content') }}
 								</div>
 							</div>
 							<div class="col-md-4 ml-5 card2">
@@ -130,10 +134,11 @@
 									width="64px"
 									class="mt-2 p-2"
 								/>
-								<p class="pt-3 text-start service fs-4 p-2">服务</p>
+								<p class="pt-3 text-start service fs-4 p-2">
+									{{ $t('home.parttwo2_service') }}
+								</p>
 								<p class="text-start pt-4 lh-lg p-2">
-									给你最好的服务。Quest
-									的服务水平，无论是项目管理、编程还是咨询，都专门满足您的需求。
+									{{ $t('home.parttwo2_service_content') }}
 								</p>
 							</div>
 						</div>
@@ -146,9 +151,11 @@
 									width="64px"
 									class="mt-2 p-2"
 								/>¸
-								<p class="pt-3 text-start fs-4 technology p-2">技术</p>
+								<p class="pt-3 text-start fs-4 technology p-2">
+									{{ $t('home.parttwo2_technology') }}
+								</p>
 								<p class="text-start pt-4 lh-lg p-2">
-									自由团队与建设并与高级团队合作，提供优质的编码和托管服务。
+									{{ $t('home.parttwo2_technology_content') }}
 								</p>
 							</div>
 							<div class="card col-md-4 ml-5 card4">
@@ -158,9 +165,11 @@
 									width="64px"
 									class="mt-2 p-2"
 								/>¸
-								<p class="pt-3 text-start fs-4 p-2">工具</p>
+								<p class="pt-3 text-start fs-4 p-2">
+									{{ $t('home.parttwo2_tools') }}
+								</p>
 								<p class="text-start pt-4 lh-lg p-2">
-									各种自研的工具，满足你的需求。
+									{{ $t('home.parttwo2_tools_content') }}
 								</p>
 							</div>
 						</div>
@@ -170,7 +179,7 @@
 		</div>
 		<div class="part-three">
 			<div id="home/partFour"></div>
-			<p class="text-center title fs-2">认识我们的全球观众</p>
+			<p class="text-center title fs-2">{{ $t('home.partthree_title') }}</p>
 			<div class="row">
 				<div class="col-md-5">
 					<img src="../../assets/images/about-us.jpeg" alt="" />
@@ -178,15 +187,16 @@
 				<div class="col-md-6 ml-5 right">
 					<p style="margin-top: 100px"></p>
 					<p class="text-start lh-lg pl-5 right">
-						Quest
-						是每个主要市场的标准供应商。在全球35个国家/地区拥有无与伦比的小组成员，具有独特的优势，可以满足任何专家组需求。
+						{{ $t('home.partthree_content1') }}
 					</p>
 					<p class="text-start lh-lg right">
-						无与伦比的可行性和定价与行业响应率
+						{{ $t('home.partthree_content2') }}
 					</p>
-					<p class="text-start lh-lg right">超过20家子供应商</p>
 					<p class="text-start lh-lg right">
-						全球超过400000名直接或间接小组成员
+						{{ $t('home.partthree_content3') }}
+					</p>
+					<p class="text-start lh-lg right">
+						{{ $t('home.partthree_content4') }}
 					</p>
 				</div>
 			</div>
@@ -203,7 +213,7 @@
 							alt="..."
 						/>
 						<p class="text-start pt-5 pb-5 fs-5">
-							What does customer service mean to researcher clients?
+							{{ $t('home.card1') }}
 						</p>
 					</div>
 					<div
@@ -216,7 +226,7 @@
 							alt="..."
 						/>
 						<p class="text-start pt-5 pb-5 fs-5">
-							Market Research Panels – from a Panelist POV
+							{{ $t('home.card2') }}
 						</p>
 					</div>
 					<div
@@ -229,7 +239,7 @@
 							alt="..."
 						/>
 						<p class="text-start pt-5 pb-5 fs-5">
-							WIRE: Reflection, Resilience and Elevation – Webinar Recap
+							{{ $t('home.card3') }}
 						</p>
 					</div>
 				</div>
@@ -256,8 +266,8 @@
 			</el-carousel>
 		</div>
 		<div class="part-six">
-			<div class="text-center fs-5 pt-5">Subscribe to newsletter</div>
-			<p class="fs-1 text-center pt-4">Get Updated With Us</p>
+			<div class="text-center fs-5 pt-5">{{$t('home.partfive')}}</div>
+			<p class="fs-1 text-center pt-4">{{$t('home.partfive2')}}</p>
 			<div class="justify-content-center d-flex pt-5 mt-5">
 				<div class="col-md-5 d-flex">
 					<input
@@ -265,8 +275,9 @@
 						class="form-control pt-3 pb-3"
 						id="exampleFormControlInput1"
 						placeholder="Your Email Address"
+						v-model="email"
 					/>
-					<button class="btn subscribe fs-5">Subscribe</button>
+					<button class="btn subscribe fs-5" @click='subscribe'>{{$t('home.subscribe')}}</button>
 				</div>
 			</div>
 			<div class="pt-5">
@@ -336,15 +347,15 @@ export default {
 			swiperList: [
 				{
 					url: require('../../assets/images/swiper1.jpeg'),
-					text: 'Need a customized sample strategy for your annual tracker?',
+					text: this.$t('home.swiper1'),
 				},
 				{
 					url: require('../../assets/images/swiper2.jpeg'),
-					text: 'The partner that becomes an extension of your team.',
+					text: this.$t('home.swiper2'),
 				},
 				{
 					url: require('../../assets/images/swiper3.jpeg'),
-					text: 'Leverage a proprietary panel of consumers for any quantitative research study',
+					text: this.$t('home.swiper3'),
 				},
 			],
 			list: [
@@ -352,6 +363,7 @@ export default {
 				{ lang: '中文', abbreviation: 'zh' },
 				{ lang: 'German', abbreviation: 'de' },
 			],
+			email:''
 		}
 	},
 	mounted() {
@@ -364,11 +376,13 @@ export default {
 		registerHandler() {
 			this.$router.push(`/registerInfo`)
 		},
+		/**切换语言 */
 		handleClick(lang) {
-			this.$store.commit('changeLanguage', {
-				lang: lang,
-			})
+			this.$i18n.locale = lang
 		},
+		subscribe(){
+			this.email=''
+		}
 	},
 }
 </script>
