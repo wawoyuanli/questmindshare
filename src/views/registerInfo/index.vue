@@ -112,45 +112,7 @@ export default {
 				alert('Birthday year can not be empty')
 				return false
 			}
-			// if (!data.surveyBirthdayMonth) {
-			// 	alert('Birthday month can not be empty')
-			// 	return false
-			// }
-			// if (!data.surveyBirthdayDay) {
-			// 	alert('Birthday day can not be empty')
-			// 	return false
-			// }
-			// if (!data.surveyAddress) {
-			// 	alert('Address can not be empty')
-			// 	return false
-			// }
-			if (!data.surveyPostcode) {
-				alert('Post Code can not be empty')
-				return false
-			}
 
-			// if (!data.phonenumber) {
-			// 	alert('Phone can not be empty')
-			// 	return false
-			// }
-		 
-
-			// if (!data.surveyPinCode) {
-			// 	alert('PinCode can not be empty')
-			// 	return false
-			// }
-			// if (/^[a-zA-Z]/.test(data.surveyPinCode)) {
-			// 	alert('PinCode need to enter four digits')
-			// 	return false
-			// }
-			// if (/^[\u4e00-\u9fa5]/.test(data.surveyPinCode)) {
-			// 	alert('PinCode need to enter four digits')
-			// 	return false
-			// }
-			// if (data.surveyPinCode.length < 4) {
-			// 	alert('PinCode need to enter four digits')
-			// 	return false
-			// }
 			if (!data.checkCode) {
 				alert(`Verify You're Human`)
 				return false
@@ -175,7 +137,6 @@ export default {
 			}
 			registerHandler(data)
 				.then(function (res) {
-					debugger
 					if (res.data.code === 0) {
 						_th.$router.push('/login')
 					} else if (res.data.code === 500) {
@@ -184,7 +145,6 @@ export default {
 					}
 				})
 				.catch(function (err) {
-					// _th.$toast("registration failed");
 					console.log(err)
 				})
 		},

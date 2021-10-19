@@ -57,10 +57,10 @@
 							<div class="col-md-12 mx-3">
 								<input
 									type="submit"
-									class="btn  py-2"
+									class="btn py-2"
 									value="send verification code"
 									@click="sendCode"
-                  style="background:#ff6f00;color:#fff"
+									style="background: #ff6f00; color: #fff"
 								/>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 							<input
 								type="text"
 								class="form-control col-md-3 py-2"
-								v-model="email"
+								v-model="code"
 								maxlength="30"
 								minlength="0"
 								placeholder="code"
@@ -91,10 +91,12 @@
 					</div>
 					<div class="col-md-10 mt-4" style="margin: 0 auto">
 						<button
-							class="mt-4 col-md-12 btn  mb-4  py-3"
+							class="mt-4 col-md-12 btn mb-4 py-3"
 							@click="resetPwd"
-              style="background:#ff6f00;border-radius:25px;color:#fff"
-						>提交</button>
+							style="background: #ff6f00; border-radius: 25px; color: #fff"
+						>
+							提交
+						</button>
 					</div>
 				</div>
 			</div>
