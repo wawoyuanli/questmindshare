@@ -2,94 +2,62 @@
 	<div class="home-main">
 		<div id="home"></div>
 		<div class="container-bg" :style="{ height: availHeight + 'px' }">
-			<nav class="navbar navbar-expand-lg  py-3">
-				<div class="container-fluid d-flex">
-					<a class="navbar-brand logo col-md-3 px-3 fs-2" href="#/home"
-						>questmindshare</a
-					>
-					<button
-						class="navbar-toggler col-md-1 bg-light navbar-light"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse col-md-8" id="navbarNav">
-						<ul class="navbar-nav col-md col-md-12">
-							<li class="nav-item border-end col-md-2" id="service">
-								<a
-									class="nav-link active text-light text-center"
-									aria-current="page"
-									href="#/home"
-									>{{ $t('home.service') }}</a
-								>
-							</li>
-							<li class="nav-item border-end col-md-1" id="markets">
-								<a
-									class="nav-link text-light text-center"
-									href="#home/partFour"
-									>{{ $t('home.markets') }}</a
-								>
-							</li>
-							<li class="nav-item border-end col-md-1" id="about">
-								<a class="nav-link text-light text-center" href="#partTwo">{{
-									$t('home.about')
-								}}</a>
-							</li>
-							<li
-								class="nav-item border-end col-md-1"
-								@click="clickHandler('contact')"
-								id="contact"
-							>
-								<a class="nav-link text-light text-center">
-									{{ $t('home.contact') }}</a
-								>
-							</li>
-							<li
-								class="nav-item text-light border-end col-md-2"
-								@click="clickHandler('login')"
-								id="login"
-							>
-								<a class="nav-link text-light text-center">
-									{{ $t('home.login') }}</a
-								>
-							</li>
-							<li
-								class="nav-item text-light col-md-2 border-end"
+			<div id="header">
+				<div class="nav-container">
+					<a href="#/home" class="logo text-center fs-1">questmindshare</a>
+					<div id="menu" class="icon-menu" @click="openMenu">
+						<i class="el-icon-menu fs-2"></i>
+					</div>
+					<ul class="nav-bar">
+						<li>
+							<a href="#/home" class="fs-5" id="service">{{
+								$t('home.service')
+							}}</a>
+						</li>
+						<li>
+							<a href="#home/partFour" class="fs-5">{{ $t('home.markets') }}</a>
+						</li>
+						<li>
+							<a href="#partTwo" class="fs-5">{{ $t('home.about') }}</a>
+						</li>
+						<li>
+							<a @click="clickHandler('contact')" id="contact" class="fs-5">{{
+								$t('home.contact')
+							}}</a>
+						</li>
+						<li>
+							<a @click="clickHandler('login')" id="login" class="fs-5">{{
+								$t('home.login')
+							}}</a>
+						</li>
+						<li>
+							<a
 								@click="clickHandler('registerInfo')"
 								id="registerInfo"
+								class="fs-5"
 							>
-								<a class="nav-link text-light text-center">
-									{{ $t('home.sigin') }}</a
-								>
-							</li>
-							<li class="nav-item text-center fs-5 col-md-3">
-								<el-dropdown @command="handleClick">
-									<span
-										class="el-dropdown-link text-light"
-										style="color: #409eff"
+								{{ $t('home.sigin') }}</a
+							>
+						</li>
+						<li>
+							<el-dropdown @command="handleClick">
+								<span class="el-dropdown-link text-light fs-5 d-flex">
+									{{ $t('home.lang') }}
+									<i class="el-icon-arrow-down el-icon--right"></i>
+								</span>
+								<el-dropdown-menu slot="dropdown">
+									<el-dropdown-item
+										v-for="item in list"
+										:key="item.abbreviation"
+										:command="item.abbreviation"
+										>{{ item.lang }}</el-dropdown-item
 									>
-										{{ $t('home.lang')
-										}}<i class="el-icon-arrow-down el-icon--right"></i>
-									</span>
-									<el-dropdown-menu slot="dropdown">
-										<el-dropdown-item
-											v-for="item in list"
-											:key="item.abbreviation"
-											:command="item.abbreviation"
-											>{{ item.lang }}</el-dropdown-item
-										>
-									</el-dropdown-menu>
-								</el-dropdown>
-							</li>
-						</ul>
-					</div>
+								</el-dropdown-menu>
+							</el-dropdown>
+						</li>
+					</ul>
 				</div>
-			</nav>
+			</div>
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
@@ -108,7 +76,7 @@
 				<div class="col-md-2"></div>
 				<div class="col-md-5">
 					<button
-						class="btn btn-lg col-md-4 fs-4 get-started"
+						class="btn btn-lg col-md-5 fs-4 get-started"
 						@click="registerHandler"
 					>
 						{{ $t('home.partone2') }}
@@ -367,6 +335,7 @@
 <script>
 import NavBar from '@c/navbar.vue'
 import Navbar from '../../components/navbar.vue'
+import $ from 'jquery'
 export default {
 	name: 'HomePage',
 	components: {
@@ -396,6 +365,7 @@ export default {
 				{ lang: 'German', abbreviation: 'de' },
 			],
 			email: '',
+			isOpen:false
 		}
 	},
 	mounted() {
@@ -415,6 +385,17 @@ export default {
 		subscribe() {
 			this.email = ''
 		},
+		openMenu() {
+			// 开关状态
+			var navBar = $('.nav-bar')
+			// 设置header的高度，将导航列表显示出来
+			var height = navBar.offset().top + navBar.height()
+			$('#header').animate({
+				height: this.isOpen ? 50 : height,
+			})
+			// 修改开关状态
+			this.isOpen = !	this.isOpen
+		},
 	},
 }
 </script>
@@ -425,42 +406,87 @@ export default {
 		width: 100vw;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+		#header {
+			padding: 10px 0;
+			width: 100%;
+			.icon-menu {
+				display: none;
+				float: right;
+				margin-top: 10px;
+			}
+		}
+		/* 文字Logo */
+		#header a.logo {
+			float: left;
+			font-weight: bold;
+			line-height: 50px;
+			width: 30%;
+		}
+		#header div.nav-container {
+			height: 50px;
+			width: 100%;
+		}
+
+		#header ul.nav-bar {
+			list-style: none;
+			float: right;
+			line-height: 50px;
+			width: 66%;
+			background-image: linear-gradient(to top, #225068, #3f818e, #438794);
+			margin-right: 20px;
+			a {
+				color: #fff !important;
+				font-family: @fontFamily;
+			}
+		}
+
+		#header ul.nav-bar li {
+			float: left;
+			text-align: center;
+			width: 12%;
+		}
+		#header ul {
+			border-radius: 40px;
+		}
+		#header ul.nav-bar li:nth-child(7) {
+			width: 22%;
+			font-family: @fontFamily;
+		}
+
+		@media screen and (max-width: 768px) {
+			#header {
+				padding: 10px 5%;
+				overflow: hidden;
+				height: 50px;
+				.icon-menu {
+					display: block;
+				}
+			}
+
+			#header a.logo {
+				line-height: 55px;
+			}
+
+			#header ul.nav-bar {
+				margin-top: 15px;
+				width: 100%;
+				// display: none;
+			}
+
+			#header ul.nav-bar li {
+				float: none;
+				padding: 0 10px;
+				width: 12%;
+			}
+			#header ul.nav-bar li:nth-child(7) {
+				width: 20%;
+			}
+		}
 		.logo {
 			font-family: @fontFamily;
 			text-shadow: 2px 2px;
 			color: @logoColor;
 			font-style: oblique;
-		}
-		#navbarNav {
-			background-color: #156c6b;
-			#service {
-				background-color: #fea000;
-			}
-			ul {
-				height: 60px;
-				line-height: 60px;
-				li {
-					a {
-						font-size: 20px;
-						font-family: @fontFamily;
-					}
-				}
-			}
-		}
-		#markets :hover {
-			background-color: #fea000;
-		}
-		#about :hover {
-			background-color: #fea000;
-		}
-		#contact :hover {
-			background-color: #fea000;
-		}
-		#login :hover {
-			background-color: #fea000;
-		}
-		#registerInfo :hover {
-			background-color: #fea000;
 		}
 		.left-content {
 			color: #267876;

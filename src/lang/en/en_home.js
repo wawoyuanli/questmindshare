@@ -5,7 +5,7 @@ export default {
   contact: 'Contact',
   login: 'Login',
   sigin: 'sigin in',
-  lang: 'exchange language',
+  lang: 'exchangeLanguage',
   partone1: 'Extract the precise insights you need, anytime, anywhere.',
   partone2: 'Get Started Now',
   parttwo1: 'Cooperate with the best people in the industry to achieve outstanding achievements',
