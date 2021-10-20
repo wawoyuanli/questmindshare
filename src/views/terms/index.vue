@@ -1,6 +1,6 @@
 <template>
   <div class="terms">
-    <Nav id="borderBottom" bgColor='#333333'></Nav>
+    <Nav></Nav>
     <div class="terms-content">
       <div class="container-fluid">
         <div class="row">
@@ -451,7 +451,7 @@
 import Nav from "@c/navbar.vue";
 import Footer from "@c/footer.vue";
 export default {
-  name: "Privacy",
+  name: "Terms",
   components: {
     Nav: Nav,
     Footer: Footer,
@@ -463,7 +463,7 @@ export default {
     };
   },
   mounted() {
-    document.getElementById("borderBottom").classList.add("borderBottom");
+    // document.getElementById("borderBottom").classList.add("borderBottom");
   },
 };
 </script>
