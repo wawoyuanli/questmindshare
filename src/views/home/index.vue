@@ -2,64 +2,94 @@
 	<div class="home-main">
 		<div id="home"></div>
 		<div class="container-bg" :style="{ height: availHeight + 'px' }">
-			<div class="nav">
-				<div
-					class="row col-md-12 d-flex justify-content-center align-items-center"
-				>
-					<div class="col-md-2 text-center fs-1 logo px-3">questmindshare</div>
-					<div class="col-md-9 d-flex">
-						<div class="col-md-2"></div>
-						<div class="d-flex header-nav-bg col-md-10">
-							<div class="col-md-2 text-center border-end" id="services">
-								<a href="#home" class="text-light">{{ $t('home.service') }}</a>
-							</div>
-							<div class="col-md-2 text-center border-end">
-								<a href="#home/partFour" class="text-light">{{
-									$t('home.markets')
-								}}</a>
-							</div>
-							<div class="col-md-2 text-center border-end">
-								<a href="#partTwo" class="text-light">{{ $t('home.about') }}</a>
-							</div>
-							<div
-								class="col-md-2 text-center border-end"
-								@click="clickHandler('contact')"
-							>
-								{{ $t('home.contact') }}
-							</div>
-							<div
-								class="col-md-2 text-center border-end"
-								@click="clickHandler('login')"
-							>
-								<a href="#partTwo" class="text-light">{{ $t('home.login') }}</a>
-							</div>
-							<div
-								class="col-md-2 text-center border-end"
-								@click="clickHandler('registerInfo')"
-							>
-								<a href="#partTwo" class="text-light">{{ $t('home.sigin') }}</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-1 px-3">
-						<el-dropdown @command="handleClick">
-							<span class="el-dropdown-link" style="color: #409eff">
-								{{ $t('home.lang')
-								}}<i class="el-icon-arrow-down el-icon--right"></i>
-							</span>
-							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item
-									v-for="item in list"
-									:key="item.abbreviation"
-									:command="item.abbreviation"
-									>{{ item.lang }}</el-dropdown-item
+			<nav class="navbar navbar-expand-lg  py-3">
+				<div class="container-fluid d-flex">
+					<a class="navbar-brand logo col-md-3 px-3 fs-2" href="#/home"
+						>questmindshare</a
+					>
+					<button
+						class="navbar-toggler col-md-1 bg-light navbar-light"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse col-md-8" id="navbarNav">
+						<ul class="navbar-nav col-md col-md-12">
+							<li class="nav-item border-end col-md-2" id="service">
+								<a
+									class="nav-link active text-light text-center"
+									aria-current="page"
+									href="#/home"
+									>{{ $t('home.service') }}</a
 								>
-							</el-dropdown-menu>
-						</el-dropdown>
+							</li>
+							<li class="nav-item border-end col-md-1" id="markets">
+								<a
+									class="nav-link text-light text-center"
+									href="#home/partFour"
+									>{{ $t('home.markets') }}</a
+								>
+							</li>
+							<li class="nav-item border-end col-md-1" id="about">
+								<a class="nav-link text-light text-center" href="#partTwo">{{
+									$t('home.about')
+								}}</a>
+							</li>
+							<li
+								class="nav-item border-end col-md-1"
+								@click="clickHandler('contact')"
+								id="contact"
+							>
+								<a class="nav-link text-light text-center">
+									{{ $t('home.contact') }}</a
+								>
+							</li>
+							<li
+								class="nav-item text-light border-end col-md-2"
+								@click="clickHandler('login')"
+								id="login"
+							>
+								<a class="nav-link text-light text-center">
+									{{ $t('home.login') }}</a
+								>
+							</li>
+							<li
+								class="nav-item text-light col-md-2 border-end"
+								@click="clickHandler('registerInfo')"
+								id="registerInfo"
+							>
+								<a class="nav-link text-light text-center">
+									{{ $t('home.sigin') }}</a
+								>
+							</li>
+							<li class="nav-item text-center fs-5 col-md-3">
+								<el-dropdown @command="handleClick">
+									<span
+										class="el-dropdown-link text-light"
+										style="color: #409eff"
+									>
+										{{ $t('home.lang')
+										}}<i class="el-icon-arrow-down el-icon--right"></i>
+									</span>
+									<el-dropdown-menu slot="dropdown">
+										<el-dropdown-item
+											v-for="item in list"
+											:key="item.abbreviation"
+											:command="item.abbreviation"
+											>{{ item.lang }}</el-dropdown-item
+										>
+									</el-dropdown-menu>
+								</el-dropdown>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-
+			</nav>
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
 			<div class="row pt-5"></div>
@@ -266,8 +296,8 @@
 			</el-carousel>
 		</div>
 		<div class="part-six">
-			<div class="text-center fs-5 pt-5">{{$t('home.partfive')}}</div>
-			<p class="fs-1 text-center pt-4">{{$t('home.partfive2')}}</p>
+			<div class="text-center fs-5 pt-5">{{ $t('home.partfive') }}</div>
+			<p class="fs-1 text-center pt-4">{{ $t('home.partfive2') }}</p>
 			<div class="justify-content-center d-flex pt-5 mt-5">
 				<div class="col-md-5 d-flex">
 					<input
@@ -277,7 +307,9 @@
 						placeholder="Your Email Address"
 						v-model="email"
 					/>
-					<button class="btn subscribe fs-5" @click='subscribe'>{{$t('home.subscribe')}}</button>
+					<button class="btn subscribe fs-5" @click="subscribe">
+						{{ $t('home.subscribe') }}
+					</button>
 				</div>
 			</div>
 			<div class="pt-5">
@@ -363,7 +395,7 @@ export default {
 				{ lang: '中文', abbreviation: 'zh' },
 				{ lang: 'German', abbreviation: 'de' },
 			],
-			email:''
+			email: '',
 		}
 	},
 	mounted() {
@@ -380,9 +412,9 @@ export default {
 		handleClick(lang) {
 			this.$i18n.locale = lang
 		},
-		subscribe(){
-			this.email=''
-		}
+		subscribe() {
+			this.email = ''
+		},
 	},
 }
 </script>
@@ -393,32 +425,42 @@ export default {
 		width: 100vw;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		.nav {
-			width: 100%;
-			height: auto;
-			padding: 20px 0px;
-			.header-nav-bg {
-				background-color: #156c6b;
-				color: #fff;
+		.logo {
+			font-family: @fontFamily;
+			text-shadow: 2px 2px;
+			color: @logoColor;
+			font-style: oblique;
+		}
+		#navbarNav {
+			background-color: #156c6b;
+			#service {
+				background-color: #fea000;
+			}
+			ul {
 				height: 60px;
 				line-height: 60px;
-				font-size: 20px;
-				font-family: @fontFamily;
+				li {
+					a {
+						font-size: 20px;
+						font-family: @fontFamily;
+					}
+				}
 			}
-			#services {
-				background-color: #fea000;
-				// border-top-left-radius: 20px;
-				// border-bottom-left-radius: 20px;
-			}
-			.header-nav-bg :hover {
-				background-color: #fea000;
-			}
-			.logo {
-				font-family: @fontFamily;
-				text-shadow: 2px 2px;
-				color: @logoColor;
-				font-style: oblique;
-			}
+		}
+		#markets :hover {
+			background-color: #fea000;
+		}
+		#about :hover {
+			background-color: #fea000;
+		}
+		#contact :hover {
+			background-color: #fea000;
+		}
+		#login :hover {
+			background-color: #fea000;
+		}
+		#registerInfo :hover {
+			background-color: #fea000;
 		}
 		.left-content {
 			color: #267876;
