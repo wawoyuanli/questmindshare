@@ -120,10 +120,14 @@ const router = new Router({
       name: '404',
       component: () => import('@/views/404/index.vue')
     },
-    /**404页面 */
+    // {
+    //   path: '*',
+    //   redirect:'/404'
+    // },
+    /**页面锚点路径刷新后的路径 */
     {
       path: '*',
-      redirect:'/404'
+      redirect:'/home'
     }
   ]
 })

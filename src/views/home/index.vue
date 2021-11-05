@@ -365,7 +365,7 @@ export default {
 				{ lang: 'German', abbreviation: 'de' },
 			],
 			email: '',
-			isOpen:false
+			isOpen: false,
 		}
 	},
 	mounted() {
@@ -394,7 +394,7 @@ export default {
 				height: this.isOpen ? 50 : height,
 			})
 			// 修改开关状态
-			this.isOpen = !	this.isOpen
+			this.isOpen = !this.isOpen
 		},
 	},
 }
