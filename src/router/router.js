@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
-export default new Router({
+const router = new Router({
   mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
@@ -18,7 +18,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/login',
@@ -27,7 +27,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/registerInfo',
@@ -36,7 +36,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/support',
@@ -45,7 +45,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
 
     },
     {
@@ -55,7 +55,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/privacy',
@@ -64,7 +64,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/tos',
@@ -73,7 +73,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/faq',
@@ -81,7 +81,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/agreement',
@@ -89,7 +89,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/terms',
@@ -97,7 +97,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/antispam',
@@ -105,7 +105,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
     },
     {
       path: '/resetpwd',
@@ -113,7 +113,22 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         window.scrollTo(0, 0)
         next()
-    }
+      }
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import('@/views/404/index.vue')
+    },
+    // {
+    //   path: '*',
+    //   redirect:'/404'
+    // },
+    /**页面锚点路径刷新后的路径 */
+    {
+      path: '*',
+      redirect:'/home'
     }
   ]
 })
+export default router
